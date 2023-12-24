@@ -1,0 +1,44 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3e3e3e;
+}
+
+.wire-container {
+    /* Styles to position your SVG correctly */
+}
+
+/* Styling the wire */
+#wire {
+    stroke: #03045E; /* Dark blue color for the wire */
+}
+
+/* Styling the current (circle) with a glowing effect */
+#current {
+    fill: #0077d8; /* Bright blue color for the current */
+    filter: url(#glow); /* Applying the glow effect */
+    animation-timing-function: cubic-bezier(0.4,0.0,0.2,1);
+
+}
+
+/* Styling the trail */
+#trail {
+    stroke: #0077d8; /* Same color as the current but without glow */
+}
+/* Define the keyframes for the current (circle) animation */
+@keyframes move-current {
+    0% {
+        transform: translateX(0px);
+        r: \10;
+    }
+    50%{
+        r:12;
+    }
+    100% {
+        transform: translateX(300px); /* End at the right edge of the wire */
+        r:10;
+    }
+}

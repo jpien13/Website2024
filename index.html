@@ -2,10 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hardware Wire Animation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <svg width="300px" height="50px" class="wire-container">
+        <!-- SVG filter -->
+        <defs>
+            <filter id="glow">
+                <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+
+        <path id="wire" d="M0,25 L300,25" stroke="black" stroke-width="5" fill="none"/>
+
+        <path id="trail" d="M0,25 L300,25" stroke="blue" stroke-width="5" fill="none" stroke-dasharray="300" stroke-dashoffset="300"/>
+
+        <circle id="current" cx="-10" cy="25" r="10" fill="blue" />
+
+    </svg>
+    <script src="app.js"></script>
 </body>
 </html>
