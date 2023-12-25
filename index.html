@@ -18,12 +18,24 @@
             </filter>
         </defs>
 
-        <path id="wire" d="M0,25 L300,25 L300,100 L600,100" stroke="black" stroke-width="5" fill="none"/>
+        <!-- First Wire -->
+        <path id="wire1" d="M0,25 L300,25 L300,100 L600,100" stroke="black" stroke-width="5" fill="none"/>
+        <path id="trail1" d="M0,25 L300,25 L300,100 L600,100" stroke="blue" stroke-width="5" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
+        <circle id="current1" cx="-10" cy="25" r="10" fill="blue" />
 
-        <path id="trail" d="M0,25 L300,25 L300,100 L600,100" stroke="blue" stroke-width="5" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
+        <!-- Second Wire -->
+        <path id="wire2" d="M0,225 L300,225 L300,150 L600,150" stroke="black" stroke-width="5" fill="none"/>
+        <path id="trail2" d="M0,225 L300,225 L300,150 L600,150" stroke="blue" stroke-width="5" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
+        <circle id="current2" cx="-10" cy="250" r="10" fill="blue" />
 
-        <circle id="current" cx="-10" cy="25" r="10" fill="blue" />
+        <!-- AND Gate -->
+        <g id="andGate">
+            <!-- Rectangle part of the AND gate -->
+            <rect x="590" y="95" width="50" height="60" fill="blue"/>
 
+            <!-- Semicircle part of the AND gate -->
+            <path d="M 639 95 A 30 30 0 0 1 639 155" fill="blue"/>
+        </g>
     </svg>
     <script src="app.js"></script>
 </body>

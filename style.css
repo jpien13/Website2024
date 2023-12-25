@@ -33,6 +33,8 @@ svg {
 #trail {
     stroke: #0077d8; /* Same color as the current but without glow */
 }
+
+
 /* Define the keyframes for the current (circle) animation */
 @keyframes move-current {
     0% {

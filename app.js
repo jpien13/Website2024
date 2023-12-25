@@ -1,9 +1,8 @@
-function animateCurrent() {
-    var wire = document.getElementById('wire');
-    var current = document.getElementById('current');
-    var trail = document.getElementById('trail');
+function animateCurrent(wireId, currentId, trailId, duration) {
+    var wire = document.getElementById(wireId);
+    var current = document.getElementById(currentId);
+    var trail = document.getElementById(trailId);
     var wireLength = wire.getTotalLength();
-    var duration = 5;
     var startTime = null;
 
     function step(timestamp) {
@@ -31,5 +30,6 @@ function animateCurrent() {
 }
 
 window.onload = function() {
-    animateCurrent();
+    animateCurrent('wire1', 'current1', 'trail1', 5); // Animate the first wire
+    animateCurrent('wire2', 'current2', 'trail2', 5); // Animate the second wire
 };
