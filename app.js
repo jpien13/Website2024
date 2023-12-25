@@ -1,22 +1,35 @@
-window.onload = function() {
-    // Get the SVG elements for the wire, current (circle), and trail
+function animateCurrent() {
     var wire = document.getElementById('wire');
     var current = document.getElementById('current');
     var trail = document.getElementById('trail');
+    var wireLength = wire.getTotalLength();
+    var duration = 5;
+    var startTime = null;
 
-    // Set the duration of the animation
-    var animationDuration = 2; // in seconds
+    function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var elapsedTime = (timestamp - startTime) / 1000; // Convert to seconds
+        var progress = elapsedTime / duration;
 
-    // Start the current animation after 1 second
-    setTimeout(function() {
-        // Set the initial position of the current (circle) off the screen to the left
-        current.setAttribute('cx', '-10');
+        if (progress > 1) progress = 1; // Ensure progress doesn't exceed 1
 
-        // Apply the animation to the current (circle)
-        current.style.animation = `move-current ${animationDuration}s linear forwards`;
+        var point = wire.getPointAtLength(progress * wireLength);
+        current.setAttribute('cx', point.x);
+        current.setAttribute('cy', point.y);
 
-        // Animate the blue trail to expand along the wire
-        trail.style.strokeDashoffset = '0';
-        trail.style.transition = `stroke-dashoffset ${animationDuration}s linear`;
-    }, 1000);
+        // Update the trail to match the current's position
+        var currentPos = progress * wireLength;
+        trail.setAttribute('stroke-dasharray', `${currentPos} ${wireLength}`);
+        trail.setAttribute('stroke-dashoffset', 0);
+
+        if (progress < 1) {
+            requestAnimationFrame(step); // Continue the animation
+        }
+    }
+
+    requestAnimationFrame(step);
+}
+
+window.onload = function() {
+    animateCurrent();
 };

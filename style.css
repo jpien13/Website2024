@@ -7,6 +7,11 @@ body, html {
     background: #3e3e3e;
 }
 
+svg {
+    width: 100vw;   /* 100% of the viewport width */
+    height: 100vh;  /* 100% of the viewport height */
+}
+
 .wire-container {
     /* Styles to position your SVG correctly */
 }
@@ -20,7 +25,7 @@ body, html {
 #current {
     fill: #0077d8; /* Bright blue color for the current */
     filter: url(#glow); /* Applying the glow effect */
-    animation-timing-function: cubic-bezier(0.4,0.0,0.2,1);
+    animation-timing-function: cubic-bezier(0.4, 0.0, 0.6, 1);
 
 }
 
@@ -32,13 +37,16 @@ body, html {
 @keyframes move-current {
     0% {
         transform: translateX(0px);
-        r: \10;
+        r: 10; /* Initial and final radius */
     }
-    50%{
-        r:12;
+    25%, 75% {
+        r: 12; /* Slightly larger radius at 25% and 75% */
     }
-    100% {
-        transform: translateX(300px); /* End at the right edge of the wire */
-        r:10;
+    50% {
+        r: 14; /* Largest radius at the midpoint */
+    }
+    100%{
+        transform: translateX(300px);
+        r: 10; /* Initial and final radius */
     }
 }

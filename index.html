@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <svg width="300px" height="50px" class="wire-container">
+    <svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" class="wire-container">
         <!-- SVG filter -->
         <defs>
             <filter id="glow">
@@ -18,9 +18,9 @@
             </filter>
         </defs>
 
-        <path id="wire" d="M0,25 L300,25" stroke="black" stroke-width="5" fill="none"/>
+        <path id="wire" d="M0,25 L300,25 L300,100 L600,100" stroke="black" stroke-width="5" fill="none"/>
 
-        <path id="trail" d="M0,25 L300,25" stroke="blue" stroke-width="5" fill="none" stroke-dasharray="300" stroke-dashoffset="300"/>
+        <path id="trail" d="M0,25 L300,25 L300,100 L600,100" stroke="blue" stroke-width="5" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
 
         <circle id="current" cx="-10" cy="25" r="10" fill="blue" />
 
