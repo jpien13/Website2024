@@ -39,7 +39,7 @@ svg {
 @keyframes move-current {
     0% {
         transform: translateX(0px);
-        r: 10; /* Initial and final radius */
+        r: 10; 
     }
     25%, 75% {
         r: 12; /* Slightly larger radius at 25% and 75% */
@@ -49,6 +49,6 @@ svg {
     }
     100%{
         transform: translateX(300px);
-        r: 10; /* Initial and final radius */
+        r: 10; 
     }
 }

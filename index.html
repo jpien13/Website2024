@@ -19,23 +19,51 @@
         </defs>
 
         <!-- First Wire -->
-        <path id="wire1" d="M0,25 L300,25 L300,100 L600,100" stroke="black" stroke-width="5" fill="none"/>
-        <path id="trail1" d="M0,25 L300,25 L300,100 L600,100" stroke="blue" stroke-width="5" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
+        <path id="wire1" d="M50,25 L300,25 L300,100 L600,100" stroke="black" stroke-width="5" fill="none"/>
+        <path id="trail1" d="M50,25 L300,25 L300,100 L600,100" stroke="blue" stroke-width="5" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
         <circle id="current1" cx="-10" cy="25" r="10" fill="blue" />
 
         <!-- Second Wire -->
-        <path id="wire2" d="M0,225 L300,225 L300,150 L600,150" stroke="black" stroke-width="5" fill="none"/>
-        <path id="trail2" d="M0,225 L300,225 L300,150 L600,150" stroke="blue" stroke-width="5" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
+        <path id="wire2" d="M50,225 L300,225 L300,150 L600,150" stroke="black" stroke-width="5" fill="none"/>
+        <path id="trail2" d="M50,225 L300,225 L300,150 L600,150" stroke="blue" stroke-width="5" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
         <circle id="current2" cx="-10" cy="250" r="10" fill="blue" />
 
         <!-- AND Gate -->
-        <g id="andGate">
-            <!-- Rectangle part of the AND gate -->
-            <rect x="590" y="95" width="50" height="60" fill="blue"/>
-
-            <!-- Semicircle part of the AND gate -->
-            <path d="M 639 95 A 30 30 0 0 1 639 155" fill="blue"/>
+        <g id="andGate1">
+            <path d=
+            "M 600 90 
+             L 600 160
+             L 619 160 
+             A 30 30 0 0 0 619 90 
+             Z" 
+          fill="none" 
+          stroke="black" 
+          stroke-width="5"/>
         </g>
+
+     
+        <path id="wire3" d="M50,350 L300,350 L300,425 L600,425" stroke="black" stroke-width="5" fill="none"/>
+        <path id="trail3" d="M50,350 L300,350 L300,425 L600,425" stroke="blue" stroke-width="5" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
+        <circle id="current3" cx="-10" cy="25" r="10" fill="blue" />
+
+
+        <path id="wire4" d="M50,550 L300,550 L300,475 L600,475" stroke="black" stroke-width="5" fill="none"/>
+        <path id="trail4" d="M50,550 L300,550 L300,475 L600,475" stroke="blue" stroke-width="5" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
+        <circle id="current4" cx="-10" cy="250" r="10" fill="blue" />
+
+
+        <g id="andGate2">
+            <path d=
+            "M 600 415 
+             L 600 485
+             L 619 485 
+             A 30 30 0 0 0 619 415 
+             Z" 
+          fill="none" 
+          stroke="black" 
+          stroke-width="5"/>
+        </g>
+
     </svg>
     <script src="app.js"></script>
 </body>
