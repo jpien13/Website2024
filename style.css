@@ -1,54 +1,42 @@
+:root {
+    --yellow1: #F9D98E;  /* Color for the current and trail */
+    --grey: #3e3e3e;     /* Color for the wire */
+}
+
 body, html {
-    height: 100%;
+    width: 100%;
+    height: auto;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #3e3e3e;
+    background-image: url('images/Desktop - 1.png');
+    background-position: center center;
 }
 
 svg {
-    width: 100vw;   /* 100% of the viewport width */
-    height: 100vh;  /* 100% of the viewport height */
+    width: 100vw;
+    height: 100vh;
 }
 
-.wire-container {
-    /* Styles to position your SVG correctly */
+/* Styling for wires, trails, and currents */
+.wire {
+    stroke-width: 5;
 }
 
-/* Styling the wire */
-#wire {
-    stroke: #03045E; /* Dark blue color for the wire */
+.trail {
+    stroke-width: 5;
 }
 
-/* Styling the current (circle) with a glowing effect */
-#current {
-    fill: #0077d8; /* Bright blue color for the current */
-    filter: url(#glow); /* Applying the glow effect */
-    animation-timing-function: cubic-bezier(0.4, 0.0, 0.6, 1);
+.current {
+    filter: url(#glow);
+}
+
+.color-1 {
+    stroke: var(--yellow1);
 
 }
 
-/* Styling the trail */
-#trail {
-    stroke: #0077d8; /* Same color as the current but without glow */
-}
-
-
-/* Define the keyframes for the current (circle) animation */
-@keyframes move-current {
-    0% {
-        transform: translateX(0px);
-        r: 10; 
-    }
-    25%, 75% {
-        r: 12; /* Slightly larger radius at 25% and 75% */
-    }
-    50% {
-        r: 14; /* Largest radius at the midpoint */
-    }
-    100%{
-        transform: translateX(300px);
-        r: 10; 
-    }
+.color-2 {
+    stroke: var(--yellow1);
 }
