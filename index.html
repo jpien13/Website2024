@@ -19,27 +19,51 @@
         </defs>
 
         <!-- First Wire -->
-        <path class="wire color-1" d="M460,258 L535,258 L535,285 L630,285" stroke-width="8" fill="none"/>
+        <path class="wire" d="M460,258 L535,258 L535,285 L630,285" stroke-width="8" fill="none"/>
         <path class="trail color-1" d="M460,258 L535,258 L535,285 L630,285" stroke-width="8" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
         <circle class="current color-1" cx="-10" cy="258" r="10" fill="#F9D98E"/>
 
         <!-- Second Wire -->
-        <path class="wire color-2" d="M460,344 L535,344 L535,315 L630,315" stroke-width="8" fill="none"/>
+        <path class="wire" d="M460,344 L535,344 L535,315 L630,315" stroke-width="8" fill="none"/>
         <path class="trail color-2" d="M460,344 L535,344 L535,315 L630,315" stroke-width="8" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-        <circle class="current color-2" cx="-10" cy="344" r="10" fill="#F9D98E" />
+        <circle class="current color-2" cx="465" cy="344" r="10" fill="#E62D69" />
 
         <!-- AND Gate -->
         <g id="andGate1">
             <path d=
-            "M 600 90 
-             L 600 160
-             L 619 160 
-             A 30 30 0 0 0 619 90 
+            "M 610 265 
+             L 610 340
+             L 665 340 
+             A 30 30 0 0 0 665 265 
              Z" 
-          fill="none" 
-          stroke="black" 
-          stroke-width="5"/>
+          fill="#F9D98E" 
+          />
         </g>
+
+
+        <!-- Third Wire -->
+        <path class="wire" d="M460,506 L535,506 L535,533 L630,533" stroke-width="8" fill="none"/>
+        <path class="trail color-3" d="M460,506 L535,506 L535,533 L630,533" stroke-width="8" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
+        <circle class="current color-3" cx="-10" cy="506" r="10" fill="#9B0044"/>
+
+        <!-- Fourth Wire -->
+        <path class="wire" d="M460,592 L535,592 L535,563 L630,563" stroke-width="8" fill="none"/>
+        <path class="trail color-4" d="M460,592 L535,592 L535,563 L630,563" stroke-width="8" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
+        <circle class="current color-4" cx="465" cy="592" r="10" fill="#F38821" />
+
+        <!-- AND Gate2 (Adjust the position as needed) -->
+        <g id="andGate2">
+            <path d=
+            "M 610 450 
+            L 610 510
+            L 639 510 
+            A 30 30 0 0 0 639 450 
+            Z" 
+        fill="none" 
+        stroke="black" 
+        stroke-width="5"/>
+        </g>
+
     </svg>
     <script src="app.js"></script>
 </body>

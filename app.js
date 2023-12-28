@@ -1,44 +1,42 @@
-function animateCurrent(wireSelector, currentSelector, trailSelector, duration) {
-    var wires = document.querySelectorAll(wireSelector);
-    var currents = document.querySelectorAll(currentSelector);
-    var trails = document.querySelectorAll(trailSelector);
+function animateCurrent(wire, currentSelector, trailSelector, duration) {
+    var current = document.querySelector(currentSelector);
+    var trail = document.querySelector(trailSelector);
+    var wireLength = wire.getTotalLength();
+    var startTime = null;
 
-    wires.forEach((wire, index) => {
-        var wireLength = wire.getTotalLength();
-        var current = currents[index];
-        var trail = trails[index];
-        var startTime = null;
+    function updateRadius(progress) {
+        return 10 * (1 - progress); // Radius will be 10 at start and 0 at end
+    }
 
-        function updateRadius(progress) {
-            return 10 * (1 - progress);
+    function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var elapsedTime = (timestamp - startTime) / 1000;
+        var progress = elapsedTime / duration;
+
+        if (progress > 1) {
+            // Reset to start the animation again
+            startTime = null;
+            progress = 0;
         }
 
-        function step(timestamp) {
-            if (!startTime) startTime = timestamp;
-            var elapsedTime = (timestamp - startTime) / 1000;
-            var progress = elapsedTime / duration;
+        var point = wire.getPointAtLength(progress * wireLength);
+        current.setAttribute('cx', point.x);
+        current.setAttribute('cy', point.y);
+        current.setAttribute('r', updateRadius(progress));
 
-            if (progress > 1) progress = 1;
-
-            var point = wire.getPointAtLength(progress * wireLength);
-            current.setAttribute('cx', point.x);
-            current.setAttribute('cy', point.y);
-            current.setAttribute('r', updateRadius(progress));
-
-            var currentPos = progress * wireLength;
-            trail.setAttribute('stroke-dasharray', `${currentPos} ${wireLength}`);
-            trail.setAttribute('stroke-dashoffset', 0);
-
-            if (progress < 1) {
-                requestAnimationFrame(step);
-            }
-        }
+        var currentPos = progress * wireLength;
+        trail.setAttribute('stroke-dasharray', `${currentPos} ${wireLength}`);
+        trail.setAttribute('stroke-dashoffset', 0);
 
         requestAnimationFrame(step);
-    });
+    }
+
+    requestAnimationFrame(step);
 }
 
 window.onload = function() {
-    animateCurrent('.wire.color-1', '.current.color-1', '.trail.color-1', 5);
-    animateCurrent('.wire.color-2', '.current.color-2', '.trail.color-2', 5);
+    var wires = document.querySelectorAll('.wire');
+    wires.forEach((wire, index) => {
+        animateCurrent(wire, `.current.color-${index + 1}`, `.trail.color-${index + 1}`, 5);
+    });
 };

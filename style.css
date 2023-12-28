@@ -1,6 +1,9 @@
 :root {
-    --yellow1: #F9D98E;  /* Color for the current and trail */
-    --grey: #3e3e3e;     /* Color for the wire */
+    --yellow1: #F9D98E;  
+    --grey: #3e3e3e;  
+    --red1: #E62D69;   
+    --black: #000000;
+
 }
 
 body, html {
@@ -10,7 +13,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('images/Desktop - 1.png');
+    background: linear-gradient(#0A2C4E, #09243E);
+    background: url('images/Desktop - 1.png');
     background-position: center center;
 }
 
@@ -19,12 +23,30 @@ svg {
     height: 100vh;
 }
 
-/* Styling for wires, trails, and currents */
+/* Common wire style */
 .wire {
+    stroke: var(--grey); /* Black color for all wires */
     stroke-width: 5;
 }
 
-.trail {
+/* Specific trail styles */
+.trail.color-1 {
+    stroke: var(--yellow1); /* Specific color for trail 1 */
+    stroke-width: 5;
+}
+
+.trail.color-2 {
+    stroke: var(--red1); /* Specific color for trail 2 */
+    stroke-width: 5;
+}
+
+.trail.color-3 {
+    stroke: #9B0044; /* Replace with the actual color */
+    stroke-width: 5;
+}
+
+.trail.color-4 {
+    stroke: #F38821; /* Replace with the actual color */
     stroke-width: 5;
 }
 
@@ -32,11 +54,12 @@ svg {
     filter: url(#glow);
 }
 
+
 .color-1 {
     stroke: var(--yellow1);
 
 }
 
 .color-2 {
-    stroke: var(--yellow1);
+    stroke: var(--red1);
 }
