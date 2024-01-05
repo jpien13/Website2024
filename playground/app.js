@@ -2,7 +2,7 @@ function currentAni(trailSelector) {
     const trail = document.querySelector(trailSelector);
     const pathLength = trail.getTotalLength();
 
-    let visibleLength = 30; // Lit up length of current
+    let visibleLength = 50; // Lit up length of current
     //strokeDasharray has 2 parrameters (dash length) (gap length)
     trail.style.strokeDasharray = `${visibleLength} ${pathLength - visibleLength}`;
     let dashOffset = 0;

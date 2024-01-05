@@ -7,66 +7,45 @@
 </head>
 <body>
     <svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" class="wire-container">
-        <!-- SVG filter -->
-        <defs>
-            <filter id="glow">
-                <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
-                <feMerge>
-                    <feMergeNode in="coloredBlur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-            </filter>
-        </defs>
 
-        <!-- First Wire -->
-        <path class="wire" d="M460,258 L535,258 L535,285 L610,285" stroke-width="8" fill="none"/>
-        <path class="trail color-1" d="M460,258 L535,258 L535,285 L610,285" stroke-width="8" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-        <!--<circle class="current color-1" cx="-10" cy="258" r="10" fill="#F9D98E"/>-->
+        <!-- Hardware Wire -->
+        <path class="wire" d="M370,258 L450,258 L450,285 L525,285" stroke-width="8" fill="none"/>
+        <path class="trail color-1" d="M370,258 L450,258 L450,285 L525,285" stroke-width="8" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
+        <!-- Software Wire -->
+        <path class="wire" d="M370,345 L450,345 L450,318 L525,318" stroke-width="8" fill="none"/>
+        <path class="trail color-2" d="M370,345 L450,345 L450,318 L525,318" stroke-width="8" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
+        <!-- Business Wire -->
+        <path class="wire" d="M370,509 L450,509 L450,536 L525,536" stroke-width="8" fill="none"/>
+        <path class="trail color-3" d="M370,509 L450,509 L450,536 L525,536" stroke-width="8" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
+        <!-- Product Wire -->
+        <path class="wire" d="M370,596 L450,596 L450,569 L525,569" stroke-width="8" fill="none"/>
+        <path class="trail color-4" d="M370,596 L450,596 L450,569 L525,569" stroke-width="8" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
 
-        <!-- Second Wire -->
-        <path class="wire" d="M460,344 L535,344 L535,315 L610,315" stroke-width="8" fill="none"/>
-        <path class="trail color-2" d="M460,344 L535,344 L535,315 L610,315" stroke-width="8" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-        <!--<circle class="current color-2" cx="465" cy="344" r="10" fill="#E62D69" />-->
-
-        <!-- AND Gate -->
-        <g id="andGate1">
+        <!-- Hrdw + sftw AND Gate -->
+        <g id="ANDGate1">
             <path d=
-            "M 610 265 
-             L 610 340
-             L 665 340 
-             A 30 30 0 0 0 665 265 
-             Z" 
-          fill="#F9D98E" 
-          />
+            "M520 269
+            L520 336 
+            L575 336  
+            A26 26 0 0 0 575 269  
+            Z" 
+        fill="#F9D98E" 
+        />
+        </g>
+
+        <g id="ANDGate2">
+            <path d=
+            "M520 520
+            L520 587
+            L575 587
+            A26 26 0 0 0 575 520
+            Z" 
+            fill="#F9D98E" 
+            />
         </g>
 
 
-        <!-- Third Wire -->
-        <path class="wire" d="M460,506 L535,506 L535,533 L630,533" stroke-width="8" fill="none"/>
-        <path class="trail color-3" d="M460,506 L535,506 L535,533 L630,533" stroke-width="8" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-        <!--<circle class="current color-3" cx="-10" cy="506" r="10" fill="#9B0044"/>-->
-
-        <!-- Fourth Wire -->
-        <path class="wire" d="M460,592 L535,592 L535,563 L630,563" stroke-width="8" fill="none"/>
-        <path class="trail color-4" d="M460,592 L535,592 L535,563 L630,563" stroke-width="8" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-        <!--<circle class="current color-4" cx="465" cy="592" r="10" fill="#F38821" />-->
-
-        <!-- AND Gate2 -->
-        <g id="andGate2">
-            <path d=
-            "M 610 513 
-             L 610 588
-             L 665 588 
-             A 30 30 0 0 0 665 513 
-             Z" 
-          fill="#F9D98E" 
-          />
-        </g>
-
-        <!-- Output wire 1 -->
-        <path class="wire output" d="M700,297 L775,297 L775,398 L830,398" stroke-width="8" fill="none"/>
-        <path class="trail color-1 output" d="M700,297 L775,297 L775,398 L830,398" stroke-width="8" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-        <!--<circle class="current color-1 output" cx="705" cy="297" r="10" fill="#F9D98E"/>-->
+     
 
 
     </svg>
