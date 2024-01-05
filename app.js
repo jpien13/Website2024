@@ -25,5 +25,11 @@ function currentAni(trailSelectors) {
 }
 
 window.onload = function() {
-    currentAni(['.trail.color-1', '.trail.color-2', '.trail.color-3','.trail.color-4']); // Add more selectors as needed
+    currentAni([
+        '.trail.color-1',
+        '.trail.color-2',
+        '.trail.color-3',
+        '.trail.color-4',
+        '.trail.color-5',
+        '.trail.color-6']);
 };

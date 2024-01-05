@@ -3,6 +3,7 @@
     --grey: #3e3e3e;  
     --red1: #E62D69;   
     --black: #000000;
+    --CLKGrey: #757575;
 
 }
 
@@ -26,40 +27,43 @@ svg {
 /* Common wire style */
 .wire {
     stroke: var(--grey); /* Black color for all wires */
-    stroke-width: 5;
+    stroke-width: 8;
+}
+
+.CLKwire {
+    stroke: var(--grey); /* Black color for all wires */
+    stroke-width: 8;
+}
+
+.trail{
+    stroke-width: 8;
 }
 
 /* Specific trail styles */
 .trail.color-1 {
-    stroke: var(--yellow1); /* Specific color for trail 1 */
-    stroke-width: 5;
+    stroke: #F9D98E;
 }
 
 .trail.color-2 {
-    stroke: var(--red1); /* Specific color for trail 2 */
-    stroke-width: 5;
+    stroke: #E62D69;
 }
 
 .trail.color-3 {
-    stroke: #9B0044; /* Replace with the actual color */
-    stroke-width: 5;
+    stroke: #9B0044;
 }
 
 .trail.color-4 {
-    stroke: #F38821; /* Replace with the actual color */
-    stroke-width: 5;
+    stroke: #F38821; 
 }
 
-.current {
-    filter: url(#glow);
+.trail.color-5 {
+    stroke: #E62D68;
 }
 
-
-.color-1 {
-    stroke: var(--yellow1);
-
+.trail.color-6 {
+    stroke: #9B0043;
 }
 
-.color-2 {
-    stroke: var(--red1);
+.trail.color-7 {
+    
 }
