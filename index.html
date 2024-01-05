@@ -51,9 +51,13 @@
         </g>
 
         <!-- CLK Wire -->
-        <path class="CLKwire" d="M789,550 L789,215 L962,215, L962,140" fill="none"/>
-        <path class="trail color-7" d="M789,550 L789,215" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-        <path class="CLKwire" d="M1126,400 L1126,215 L962,215, L962,140" fill="none"/>
+        <!-- NOTE THAT BOTH CLKWIRE LENGTH HAVE TO BE THE SAME SO THAT THE ANIMATION IS SYNCED. AS SUCH I ADDED A BOOF AHH RECTANGLE TO HIDE THE EXTENSION ON WIRE 2-->
+        <path class="CLKwire" d="M962,140 L962,215 L789,215 L789,550" fill="none"/>
+        <path class="trail color-7" d="M962,140 L962,215 L789,215 L789,550" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
+        <path class="CLKwire" d="M962,140 L962,215 L1126,215 L1126,559" fill="none"/>
+        <path class="trail color-7" d="M962,140 L962,215 L1126,215 L1126,559" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
+        <!-- BOOF AHH RECTANGLE TO HIDE THE CLKWire Extension-->
+        <rect width="50" height="100" x="1100" y="480" fill="#0A2C4E"/>
 
 
         <g class="register" transform="translate(760, 320)"> 

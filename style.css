@@ -14,7 +14,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(#0A2C4E, #09243E);
+    background-color: #0A2C4E;
+    /*background: linear-gradient(#0A2C4E, #09243E);*/
     /*background: url('images/Desktop - 2.png');*/
     background-position: center center;
 }
@@ -65,5 +66,5 @@ svg {
 }
 
 .trail.color-7 {
-    
+    stroke: #268A81;
 }
