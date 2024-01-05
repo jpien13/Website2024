@@ -1,42 +1,36 @@
-function animateCurrent(wire, currentSelector, trailSelector, duration) {
-    var current = document.querySelector(currentSelector);
-    var trail = document.querySelector(trailSelector);
-    var wireLength = wire.getTotalLength();
-    var startTime = null;
+function animateTrail(wireSelector, trailSelector, duration, onFadeComplete) {
+    const wire = document.querySelector(wireSelector);
+    const trail = document.querySelector(trailSelector);
+    const trailLen = trail.getTotalLength();
+    let decreaseStep = duration;
 
-    function updateRadius(progress) {
-        return 10 * (1 - progress); // Radius will be 10 at start and 0 at end
+    function animate() {
+        trailLen -= decreaseStep;
+        let dashArrayValue
     }
 
-    function step(timestamp) {
-        if (!startTime) startTime = timestamp;
-        var elapsedTime = (timestamp - startTime) / 1000;
-        var progress = elapsedTime / duration;
-
-        if (progress > 1) {
-            // Reset to start the animation again
-            startTime = null;
-            progress = 0;
-        }
-
-        var point = wire.getPointAtLength(progress * wireLength);
-        current.setAttribute('cx', point.x);
-        current.setAttribute('cy', point.y);
-        current.setAttribute('r', updateRadius(progress));
-
-        var currentPos = progress * wireLength;
-        trail.setAttribute('stroke-dasharray', `${currentPos} ${wireLength}`);
-        trail.setAttribute('stroke-dashoffset', 0);
-
-        requestAnimationFrame(step);
-    }
+    
 
     requestAnimationFrame(step);
 }
 
+let wire1Extended = false;
+let wire2Extended = false;
+
+function checkAndStartOutputWireFade() {
+    if (wire1Extended && wire2Extended) {
+        animateTrail('.wire.output', '.trail.color-1.output', 5, null);
+    }
+}
+
 window.onload = function() {
-    var wires = document.querySelectorAll('.wire');
-    wires.forEach((wire, index) => {
-        animateCurrent(wire, `.current.color-${index + 1}`, `.trail.color-${index + 1}`, 5);
+    animateTrail('.wire:not(.output)', '.trail.color-1', 10, () => {
+        wire1Extended = true;
+        checkAndStartOutputWireFade();
+    });
+
+    animateTrail('.wire:not(.output)', '.trail.color-2', 10, () => {
+        wire2Extended = true;
+        checkAndStartOutputWireFade();
     });
 };

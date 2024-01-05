@@ -35,21 +35,6 @@ svg {
     stroke-width: 5;
 }
 
-.trail.color-2 {
-    stroke: var(--red1); /* Specific color for trail 2 */
-    stroke-width: 5;
-}
-
-.trail.color-3 {
-    stroke: #9B0044; /* Replace with the actual color */
-    stroke-width: 5;
-}
-
-.trail.color-4 {
-    stroke: #F38821; /* Replace with the actual color */
-    stroke-width: 5;
-}
-
 .current {
     filter: url(#glow);
 }
@@ -60,6 +45,3 @@ svg {
 
 }
 
-.color-2 {
-    stroke: var(--red1);
-}
