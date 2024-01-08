@@ -27,28 +27,29 @@
         <path class="wire" d="M608,550 L687,550 L687,494 L760,494" fill="none"/>
         <path class="trail color-6" d="M610,550 L687,550 L687,494 L760,494" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
 
+        <!-- Register1 Output Q1 -->
+        <path class="wire" d="M815,494 L860,494, L860,445, L920,445" fill="none"/>
+        <path class="trail color-6" d="M815,494 L860,494, L860,445, L920,445" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
+
+        <!-- Register2 Output Q2 -->
+        <path class="wire" d="M815,353 L860,353, L860,402, L920,402" fill="none"/>
+        <path class="trail color-6" d="M815,353 L860,353, L860,402, L920,402" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
+
         <!-- Hrdw + sftw AND Gate -->
-        <g id="ANDGate1">
-            <path d=
-            "M520 269
-            L520 336 
-            L575 336  
-            A26 26 0 0 0 575 269  
-            Z" 
-        fill="#F9D98E" 
-        />
+        <g id="ANDGate3" transform="translate(525,265)">
+            <path d="M0 0 L0 67 L55 67 A26 26 0 0 0 55 0 Z" fill="#F9D98E"/>
         </g>
+
         <!-- Biz + Prod AND Gate -->
-        <g id="ANDGate2">
-            <path d=
-            "M520 520
-            L520 587
-            L575 587
-            A26 26 0 0 0 575 520
-            Z" 
-            fill="#F9D98E" 
-            />
+        <g id="ANDGate3" transform="translate(525,515)">
+            <path d="M0 0 L0 67 L55 67 A26 26 0 0 0 55 0 Z" fill="#F9D98E"/>
         </g>
+
+        <!-- Q1 + Q2 AND Gate -->
+        <g id="ANDGate3" transform="translate(915,393)">
+            <path d="M0 0 L0 67 L55 67 A26 26 0 0 0 55 0 Z" fill="#F9D98E"/>
+        </g>
+
 
         <!-- CLK Wire -->
         <!-- NOTE THAT BOTH CLKWIRE LENGTH HAVE TO BE THE SAME SO THAT THE ANIMATION IS SYNCED. AS SUCH I ADDED A BOOF AHH RECTANGLE TO HIDE THE EXTENSION ON WIRE 2-->
@@ -58,7 +59,6 @@
         <path class="trail color-7" d="M962,140 L962,215 L1126,215 L1126,559" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
         <!-- BOOF AHH RECTANGLE TO HIDE THE CLKWire Extension-->
         <rect width="50" height="100" x="1100" y="480" fill="#0A2C4E"/>
-
 
         <g class="register" transform="translate(760, 320)"> 
             <!-- Elements positioned relative to (0,0) within the group -->

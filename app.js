@@ -28,19 +28,19 @@ function currentAni(trailSelectors, rate) {
 }
 
 window.onload = function() {
-    // Call currentAni for each set of trails
+    const clkRate = 20; // Base rate for CLK wire
+    const inputDataRate = clkRate * 0.1; // Faster rate for data inputs to complete 90% in same time
+
+    // Animate CLK wire
+    currentAni(['.trail.color-7'], clkRate);
+
+    // Animate data input wires
     currentAni([
         '.trail.color-1',
         '.trail.color-2',
         '.trail.color-3',
         '.trail.color-4',
         '.trail.color-5',
-        '.trail.color-6',
-
-    ], 1);
-
-    // Call currentAni for color-7 trails which includes both paths
-    currentAni([
-        '.trail.color-7'
-    ], 10);
+        '.trail.color-6'
+    ], inputDataRate);
 };
