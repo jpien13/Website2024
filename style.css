@@ -68,3 +68,48 @@ svg {
 .trail.color-7 {
     stroke: #268A81;
 }
+
+.Me {
+    font-weight: 800;
+    font-size: 40px; 
+    font-family: "Inter";
+    fill: #FFFFFF;
+}
+
+.labelID {
+    font-weight: 800;
+    font-size: 30px;
+    font-family: "Inter";
+}
+
+.label.color-1 {
+    fill: #F9D987;
+}
+
+.label.color-2 {
+    fill: #E62D69;
+}
+
+.label.color-3 {
+    fill: #9B0044;
+}
+
+.label.color-4 {
+    fill: #F38821;
+}
+
+.labelID.color-1{
+    fill: #CD8C3A;
+}
+
+.labelID.color-2{
+    fill: #AF033E;
+}
+
+.labelID.color-3{
+    fill: #F783AE;
+}
+
+.labelID.color-4{
+    fill: #FFD57C;
+}

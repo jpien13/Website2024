@@ -28,7 +28,7 @@ function currentAni(trailSelectors, rate) {
 }
 
 window.onload = function() {
-    const clkRate = 20; // Base rate for CLK wire
+    const clkRate = 10; // Base rate for CLK wire
     const inputDataRate = clkRate * 0.1; // Faster rate for data inputs to complete 90% in same time
 
     // Animate CLK wire
