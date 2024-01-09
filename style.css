@@ -113,3 +113,20 @@ svg {
 .labelID.color-4{
     fill: #FFD57C;
 }
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* Additional styling */
+}
+
+section {
+    padding: 20px;
+    /* Additional styling */
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
