@@ -1,26 +1,3 @@
-:root {
-    --yellow1: #F9D98E;  
-    --grey: #3e3e3e;  
-    --red1: #E62D69;   
-    --black: #000000;
-    --CLKGrey: #757575;
-
-}
-
-body, html {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #0A2C4E;
-    /*background: linear-gradient(#0A2C4E, #09243E);*/
-    /*background: url('images/Desktop - 2.png');*/
-    background-position: center center;
-}
-
 svg {
     width: 100vw;
     height: 100vh;
@@ -113,21 +90,4 @@ svg {
 
 .labelID.color-4{
     fill: #FFD57C;
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    /* Additional styling */
-}
-
-section {
-    padding: 20px;
-    /* Additional styling */
-}
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
 }
