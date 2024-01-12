@@ -1,47 +1,59 @@
-:root {
-    --yellow1: #F9D98E;  
-    --grey: #3e3e3e;  
-    --red1: #E62D69;   
-    --black: #000000;
-
-}
 
 body, html {
-    width: 100%;
-    height: auto;
+    font-family: 'Inter', sans-serif;
     margin: 0;
+    padding: 0;
+    color: #0A2C4E; /* Dark Blue Text */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#about {
+    background-color: #2E7BC8; /* Blue Background */
+    color: #FFFFFF; /* White Text */
+    padding: 50px 0;
+    text-align: center;
+}
+
+#profile-skills {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    background-color: #76A9F5; /* Light Blue Background */
+}
+
+#profile-skills .profile,
+#profile-skills .skills {
+    width: 48%;
+}
+
+#profile-skills h2 {
+    color: #2E7BC8; /* Blue Text */
+}
+
+#profile-skills .skills-list h3 {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #0A2C4E; /* Dark Blue Background */
+    padding: 50px 0;
+}
+
+/* Placeholder styles for logos */
+footer .container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: linear-gradient(#0A2C4E, #09243E);
-    /*background: url('images/Desktop - 1.png');*/
-    background-position: center center;
 }
 
-svg {
-    width: 100vw;
-    height: 100vh;
+/* Placeholder for the logo images */
+.logo-placeholder {
+    width: 100px;
+    height: 30px;
+    background-color: #FFFFFF; /* White Placeholder */
+    margin: 0 10px;
+    display: inline-block;
 }
-
-/* Common wire style */
-.wire {
-    stroke: var(--grey); /* Black color for all wires */
-    stroke-width: 5;
-}
-
-/* Specific trail styles */
-.trail.color-1 {
-    stroke: var(--yellow1); /* Specific color for trail 1 */
-    stroke-width: 5;
-}
-
-.current {
-    filter: url(#glow);
-}
-
-
-.color-1 {
-    stroke: var(--yellow1);
-
-}
-
