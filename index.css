@@ -5,7 +5,7 @@
     --black: #000000;
     --CLKGrey: #757575;
     --color-bg: #0A2C4E;
-    --text-color: #76A9F5;
+    --text-color: #D1D1D1;
     --section-header: #2E7BC8;
 
 
@@ -13,6 +13,12 @@
     --container-width-lg: 75%;
     --container-width-md: 86%;
     --container-width-sm: 90%;
+}
+
+.wire-container {
+    width: 100vw; /* Adjust as needed */
+    height: auto; /* This will maintain the aspect ratio */
+    max-height: 100vh; /* Optional: To limit the maximum height */
 }
  
 body, html {
@@ -67,15 +73,32 @@ section > h3, section > h1{
 
 
 h1{
-    font-size: 64px;
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+}
+
+h2{
+    font-size: 34px;
     font-weight: 800;
     color: white;
 }
 
 h3{
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 800;
     color: var(--section-header);
 }
 
- 
+ h4{
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+ }
+
+ h5{
+    margin: 0;
+    font-size: 20px;
+    color: white;
+    font-weight: 300;
+ }

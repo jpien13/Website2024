@@ -1,21 +1,43 @@
 .bio__container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    display: flex;
+    align-items: center; 
+    width: 60%;
 }
 
-.about-headshot{
-    width: 40%;
+.bio__container p{
+    font-size: 28px;
 }
+
+.about-headshot {
+    width: 25%;
+    max-width: 500px;
+    align-self: center;
+}
+
 
 .about__container{
+    width: 60%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 
+
 .about__container .aboutSection1 p,
 .about__container .aboutSection2 p,
-.bio__container p {
+.bio__container p{
     color: var(--text-color);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.brief{
+    padding-left: 5%;
+}
+
+.name{
+    font-weight: 800;
 }
 
