@@ -14,15 +14,17 @@
     width: 40%;
     height: 100vh;
     position: fixed;
-    overflow-y: auto;
-    border: 2px solid white;
     padding: 5%;
+    overflow-y: auto;
+    
 }
 
 .left {
     left: 0;
     top: 0;
     bottom: 0;
+    display: flex;
+    flex-direction: column;
     
 }
 
@@ -85,7 +87,7 @@ h3 {
 }
 
 h1{
-    font-size: 50px;
+    font-size: 53px;
     font-weight: 800;
     color: white;
 }
