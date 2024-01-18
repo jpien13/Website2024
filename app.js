@@ -30,7 +30,7 @@ function currentAni(trailSelectors, rate) {
 function animateText() {
     const targetText = "Hello I'm Jason.";
     let randomText = Array(targetText.length).fill('0').join('');
-    const textElement = document.querySelector('#about h1');
+    const textElement = document.querySelector('#animated-text');
     textElement.textContent = randomText;
 
     let index = 0;

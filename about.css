@@ -1,42 +1,4 @@
-#about {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#about .about-header-container {
-    width: 60%;
+.about-header-container {
     margin: 0 auto;
-    padding-bottom: 5rem;
-}
-
-
-.bio__container{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    display: flex;
-    align-items: center; 
-    width: 60%;
-}
-
-.bio__container p{
-    font-size: 28px;
-}
-
-.about-headshot {
-    width: 25%;
-    max-width: 500px;
-    align-self: center;
-}
-
-.bio__container p{
-    color: var(--text-color);
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.name{
-    font-weight: 800;
+    width: 80%;
 }

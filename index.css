@@ -8,16 +8,32 @@
     --text-color: #D1D1D1;
     --section-header: #2E7BC8;
     --highlight-text: #00E0FF;
+}
 
+.left, .right {
+    width: 40%;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+    border: 2px solid white;
+    padding: 5%;
+}
 
-    /*container class width will change with screen size*/
-    --container-width-lg: 75%;
-    --container-width-md: 86%;
-    --container-width-sm: 90%;
+.left {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+}
+
+.right {
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
 .wire-container {
-    width: 100vw; /* Adjust as needed */
+    width: 100%; /* Adjust as needed */
     height: auto; /* This will maintain the aspect ratio */
     max-height: 100vh; /* Optional: To limit the maximum height */
 }
@@ -36,7 +52,6 @@ body, html {
 }
 
 .container{
-    width: var(--container-width-lg);
     margin: 0 auto;
 }
 
@@ -69,14 +84,8 @@ h3 {
     margin-bottom: 0.1rem;
 }
 
-h1 {
-    margin-top: 0.2rem;
-    margin-bottom:3rem;
-}
-
-
 h1{
-    font-size: 80px;
+    font-size: 50px;
     font-weight: 800;
     color: white;
 }
@@ -126,16 +135,6 @@ h3{
     top: -20px;
 }
 
-
-
- /* Media query for smaller screens */
-@media screen and (max-width: 600px) {
-    section {
-        padding: 3vh 10px; /* Reduced padding for smaller screens */
-    }
-}
-
-style.css:
 svg {
     width: 100vw;
     height: 100vh;
@@ -228,4 +227,11 @@ svg {
 
 .labelID.color-4{
     fill: #FFD57C;
+}
+
+ /* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    section {
+        padding: 3vh 10px; /* Reduced padding for smaller screens */
+    }
 }
