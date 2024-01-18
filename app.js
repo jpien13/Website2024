@@ -27,7 +27,44 @@ function currentAni(trailSelectors, rate) {
     });
 }
 
-window.onload = function() {
+function animateText() {
+    const targetText = "Hello I'm Jason.";
+    let randomText = Array(targetText.length).fill('0').join('');
+    const textElement = document.querySelector('#about h1');
+    textElement.textContent = randomText;
+
+    let index = 0;
+    function updateText() {
+        let newText = '';
+        for (let i = 0; i < targetText.length; i++) {
+            if (i < index) {
+                newText += targetText[i];
+            } else {
+                newText += Math.random() < 0.5 ? '1' : '0';
+            }
+        }
+        textElement.textContent = newText;
+
+        if (index < targetText.length) {
+            index++;
+            setTimeout(updateText, 50); // Adjust time for character change speed
+        } else {
+            setTimeout(() => {
+                index = 0;
+                updateText();
+            }, 10000); // Delay before restarting
+        }
+    }
+
+    updateText();
+}
+
+
+window.onload = function () {
+    
+    animateText();
+
+
     const clkRate = 10; // Base rate for CLK wire
     const inputDataRate = clkRate * 0.1; // Faster rate for data inputs to complete 90% in same time
 
@@ -44,3 +81,4 @@ window.onload = function() {
         '.trail.color-6'
     ], inputDataRate);
 };
+

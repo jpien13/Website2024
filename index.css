@@ -4,9 +4,10 @@
     --red1: #E62D69;   
     --black: #000000;
     --CLKGrey: #757575;
-    --color-bg: #0A2C4E;
+    --color-bg: #0a243e;
     --text-color: #D1D1D1;
     --section-header: #2E7BC8;
+    --highlight-text: #00E0FF;
 
 
     /*container class width will change with screen size*/
@@ -39,18 +40,20 @@ body, html {
     margin: 0 auto;
 }
 
-section{
-    margin-top: 1rem;
-}
-
 nav {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10;
+
 }
 
 section {
-    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 html {
@@ -61,33 +64,34 @@ section > h3, section > h1{
     text-align: center;
 }
 
-#about h3 {
+h3 {
     margin-top: 3rem;
     margin-bottom: 0.1rem;
 }
 
-#about h1 {
+h1 {
     margin-top: 0.2rem;
     margin-bottom:3rem;
 }
 
 
 h1{
-    font-size: 40px;
+    font-size: 80px;
     font-weight: 800;
     color: white;
 }
 
 h2{
-    font-size: 34px;
+    font-size: 22px;
     font-weight: 800;
     color: white;
 }
 
 h3{
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 800;
     color: var(--section-header);
+    padding-bottom: 2rem;
 }
 
  h4{
@@ -102,3 +106,126 @@ h3{
     color: white;
     font-weight: 300;
  }
+
+ h6{
+    font-size: 15px;
+    font-weight: 200;
+    color: var(--highlight-text);
+ }
+
+ #glowing-cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1000;
+    background-color: #00E0FF;
+    box-shadow: 0 0 10px #00E0FF, 0 0 20px #00E0FF, 0 0 30px #00E0FF;
+    left: -20px; /* Initially position off-screen */
+    top: -20px;
+}
+
+
+
+ /* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    section {
+        padding: 3vh 10px; /* Reduced padding for smaller screens */
+    }
+}
+
+style.css:
+svg {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Common wire style */
+.wire {
+    stroke: var(--grey); /* Black color for all wires */
+    stroke-width: 8;
+}
+
+.CLKwire {
+    stroke: var(--grey); /* Black color for all wires */
+    stroke-width: 8;
+}
+
+.trail{
+    stroke-width: 8;
+}
+
+/* Specific trail styles */
+.trail.color-1 {
+    stroke: #F9D98E;
+}
+
+.trail.color-2 {
+    stroke: #E62D69;
+}
+
+.trail.color-3 {
+    stroke: #9B0044;
+}
+
+.trail.color-4 {
+    stroke: #F38821; 
+}
+
+.trail.color-5 {
+    stroke: #E62D68;
+}
+
+.trail.color-6 {
+    stroke: #9B0043;
+}
+
+.trail.color-7 {
+    stroke: #268A81;
+}
+
+.Me {
+    font-weight: 800;
+    font-size: 40px; 
+    font-family: "Inter";
+    fill: #FFFFFF;
+}
+
+.labelID {
+    font-weight: 800;
+    font-size: 30px;
+    font-family: "Inter";
+}
+
+.label.color-1 {
+    fill: #F9D987;
+}
+
+.label.color-2 {
+    fill: #E62D69;
+}
+
+.label.color-3 {
+    fill: #9B0044;
+}
+
+.label.color-4 {
+    fill: #F38821;
+}
+
+.labelID.color-1{
+    fill: #CD8C3A;
+}
+
+.labelID.color-2{
+    fill: #AF033E;
+}
+
+.labelID.color-3{
+    fill: #F783AE;
+}
+
+.labelID.color-4{
+    fill: #FFD57C;
+}
