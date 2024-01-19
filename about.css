@@ -1,4 +1,11 @@
 .about-header-container {
     margin: 0 auto;
     width: 80%;
+    margin-top: 5rem;
+}
+
+.wire-container {
+    width: 100%; /* Adjust as needed */
+    height: auto; /* This will maintain the aspect ratio */
+    max-height: 100vh; /* Optional: To limit the maximum height */
 }

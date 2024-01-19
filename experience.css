@@ -1,12 +1,17 @@
+.experience__container{
+    margin: 4rem;
+    width: 100%;
+}
+
 .experience__details {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 20px;
+    padding: 10px;
 }
 
-.job-description {
-    padding-left: 3rem;
+.job-description h3{
+    margin-top: 0;
 }
 
 .job-description h2{
@@ -15,16 +20,15 @@
 
 .job-description h6{
     padding-bottom: 1rem;
+    flex: 1;
 }
 
-.job-description p {
-    color: var(--text-color);
-    font-size: 20px;
-    font-weight: 400;
-}
 
 .date {
-    margin: 0;
+    flex: 0 0 auto;
+    margin-right: 5px; 
+    margin-top: 1px;
+    width: 180px;
 }
 
 .position {
@@ -37,12 +41,13 @@
     background-color: #11508D;
     border-radius: 5px;
     padding: 5px 10px; /* Adjust as needed */
+    margin: 4px;
 }
 
 .text-container span {
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
+    font-family: 'Sora', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
     color: #00E0FF;
     text-align: center; /* Center the text */
 }
