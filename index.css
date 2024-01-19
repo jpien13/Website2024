@@ -64,7 +64,6 @@ nav {
 }
 
 section {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,9 +78,14 @@ section > h3, section > h1{
     text-align: center;
 }
 
+.highlighted-word{
+    font-weight: 800;
+    color: white;
+}
+
 h1{
     font-size: 48px;
-    font-weight: 800;
+    font-weight: 400;
     color: white;
     margin-bottom: 1rem;
 }
@@ -122,6 +126,7 @@ h6{
     font-weight: 300;
     color: var(--text-color);
     font-family: 'Sora', sans-serif;
+    line-height: 24px;
  }
 
 svg {

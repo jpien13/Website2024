@@ -23,7 +23,6 @@
     flex: 1;
 }
 
-
 .date {
     flex: 0 0 auto;
     margin-right: 5px; 
@@ -34,7 +33,6 @@
 .position {
     margin: 0;
 }
-
 
 .text-container {
     display: inline-block; /* Makes the div size fit the text */
