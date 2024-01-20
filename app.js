@@ -59,6 +59,10 @@ function animateText() {
     updateText();
 }
 
+document.addEventListener("pointermove", (ev) => {
+  document.body.style.setProperty("--x", ev.clientX + 'px');
+  document.body.style.setProperty("--y", ev.clientY + 'px');
+});
 
 window.onload = function () {
     

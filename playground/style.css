@@ -1,59 +1,32 @@
-
-body, html {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #0A2C4E; /* Dark Blue Text */
+svg {
+    width: 100vw;
+    height: 100vh;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+/* Common wire style */
+.wire {
+    stroke: var(--grey); /* Black color for all wires */
+    stroke-width: 8;
 }
 
-#about {
-    background-color: #2E7BC8; /* Blue Background */
-    color: #FFFFFF; /* White Text */
-    padding: 50px 0;
-    text-align: center;
+.CLKwire {
+    stroke: var(--grey); /* Black color for all wires */
+    stroke-width: 8;
 }
 
-#profile-skills {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 0;
-    background-color: #76A9F5; /* Light Blue Background */
+.trail{
+    stroke-width: 8;
 }
 
-#profile-skills .profile,
-#profile-skills .skills {
-    width: 48%;
+.Me {
+    font-weight: 800;
+    font-size: 40px; 
+    font-family: 'Sora', sans-serif;
+    fill: #FFFFFF;
 }
 
-#profile-skills h2 {
-    color: #2E7BC8; /* Blue Text */
-}
-
-#profile-skills .skills-list h3 {
-    margin-top: 20px;
-}
-
-footer {
-    background-color: #0A2C4E; /* Dark Blue Background */
-    padding: 50px 0;
-}
-
-/* Placeholder styles for logos */
-footer .container {
-    display: flex;
-    justify-content: center;
-}
-
-/* Placeholder for the logo images */
-.logo-placeholder {
-    width: 100px;
-    height: 30px;
-    background-color: #FFFFFF; /* White Placeholder */
-    margin: 0 10px;
-    display: inline-block;
+.labelID {
+    font-weight: 800;
+    font-size: 30px;
+    font-family: 'Sora', sans-serif;
 }

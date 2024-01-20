@@ -1,19 +1,31 @@
 :root{
     --yellow1: #F9D98E;  
-    --grey: #3e3e3e;  
+    --grey: #cdcdcd;  
     --red1: #E62D69;   
     --black: #000000;
     --CLKGrey: #757575;
-    --color-bg: #03192f;
-    --text-color: #D4D4D8;
-    --section-header: #2E7BC8;
-    --highlight-text: #00E0FF;
+    --color-bg: white;
+    --text-color: #272727;
+    --section-header: #219EBC;
+    --highlight-text: #8ECAE6;
+
+    --color1: #8ECAE6;
+    --color2: #219EBC;
+    --color3: #023047;
+    --color4: #FFB703;
+    --color5: #FB8500;
+
+    --color1-off: #ffffff;
+    --color2-off: #219EBC;
+    --color3-off: #ffffff;
+    --color4-off: #000000;
+    --color5-off: #FB8500;
+
 }
 
 .main{
     display: flex;
     width: 85%;
-    z-index: 2;
 }
 
 .left, .right {
@@ -81,13 +93,13 @@ section > h3, section > h1{
 
 .highlighted-word{
     font-weight: 800;
-    color: white;
+    color: var(--color4);
 }
 
 h1{
     font-size: 48px;
-    font-weight: 400;
-    color: white;
+    font-weight: 800;
+    color: black;
     margin-bottom: 1rem;
 }
 
@@ -100,19 +112,19 @@ h2{
 h3{
     font-size: 20px;
     font-weight: 800;
-    color: white;
+    color: var(--color5);
 }
 
 h4{
     font-size: 24px;
     font-weight: 800;
-    color: white;
+    color: var(--color2);
  }
 
 h5{
     margin: 0;
     font-size: 20px;
-    color: white;
+    color: var(--color2);
     font-weight: 300;
  }
 
@@ -152,31 +164,31 @@ svg {
 
 /* Specific trail styles */
 .trail.color-1 {
-    stroke: #F9D98E;
+    stroke: var(--color1);
 }
 
 .trail.color-2 {
-    stroke: #E62D69;
+    stroke: var(--color2);
 }
 
 .trail.color-3 {
-    stroke: #9B0044;
+    stroke: var(--color1);
 }
 
 .trail.color-4 {
-    stroke: #F38821; 
+    stroke: var(--color4); 
 }
 
 .trail.color-5 {
-    stroke: #E62D68;
+    stroke: var(--color5);
 }
 
 .trail.color-6 {
-    stroke: #9B0043;
+    stroke: var(--color1);
 }
 
 .trail.color-7 {
-    stroke: #268A81;
+    stroke: var(--color5);
 }
 
 .Me {
@@ -193,36 +205,37 @@ svg {
 }
 
 .label.color-1 {
-    fill: #F9D987;
+    fill: var(--color1);
 }
 
 .label.color-2 {
-    fill: #E62D69;
+    fill: var(--color4);
 }
 
 .label.color-3 {
-    fill: #9B0044;
+    fill: var(--color3);
 }
 
 .label.color-4 {
-    fill: #F38821;
+    fill: var(--color5);
 }
 
 .labelID.color-1{
-    fill: #CD8C3A;
+    fill: var(--color1-off);
 }
 
 .labelID.color-2{
-    fill: #AF033E;
+    fill: var(--color4-off);
 }
 
 .labelID.color-3{
-    fill: #F783AE;
+    fill: var(--color3-off);
 }
 
 .labelID.color-4{
-    fill: #FFD57C;
+    fill: var(--color5-off);
 }
+
 
  /* Media query for smaller screens */
 @media screen and (max-width: 600px) {

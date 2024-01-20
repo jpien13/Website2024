@@ -1,0 +1,52 @@
+.experience__container{
+    margin: 4rem;
+    width: 100%;
+}
+
+.experience__details {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.job-description h3{
+    margin-top: 0;
+}
+
+.job-description h2{
+    margin-top: 0;
+}
+
+.job-description h6{
+    padding-bottom: 1rem;
+    flex: 1;
+}
+
+.date {
+    flex: 0 0 auto;
+    margin-right: 5px; 
+    margin-top: 1px;
+    width: 180px;
+}
+
+.position {
+    margin: 0;
+}
+
+.text-container {
+    display: inline-block; /* Makes the div size fit the text */
+    background-color: var(--color4);
+    border-radius: 5px;
+    padding: 5px 10px; /* Adjust as needed */
+    margin: 4px;
+}
+
+.text-container span {
+    font-family: 'Sora', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    text-align: center; /* Center the text */
+}
+
