@@ -1,5 +1,5 @@
 .resume_container{
-    padding-top: 5rem;
+    padding: 0;
 }
 
 button {
@@ -11,6 +11,7 @@ button {
     font-size: 20px;
     font-weight: 400;
     color: white;
+    padding: 0;
 }
 
 button:hover {
@@ -46,4 +47,16 @@ button:hover span:after {
 
 .fi-bs-arrow-small-down{
     color: white;
+}
+
+#skip-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+
 }

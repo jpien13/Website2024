@@ -36,7 +36,7 @@
 
 .text-container {
     display: inline-block; /* Makes the div size fit the text */
-    background-color: #11508D;
+    background-color: var(--block);
     border-radius: 5px;
     padding: 5px 10px; /* Adjust as needed */
     margin: 4px;

@@ -6,10 +6,38 @@
     --CLKGrey: #757575;
     --color-bg: #03192f;
     --text-color: #D4D4D8;
-    --section-header: #2E7BC8;
+    --block: #11508D;
     --highlight-text: #00E0FF;
 
-    --transition: all 400ms ease;
+    --transition: all 200ms ease;
+}
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-bg);
+    z-index: 3; /* Higher than other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#main {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s;
+}
+
+/* Animation to swipe up the splash screen */
+@keyframes swipeUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100vh); }
+}
+
+.animation{
+    z-index: 2;
 }
 
 .main{
@@ -113,7 +141,6 @@ li a:hover span:after {
   opacity: 1;
   right: 0;
 }
-
 
 section {
     display: flex;
