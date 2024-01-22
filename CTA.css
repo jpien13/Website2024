@@ -58,5 +58,5 @@ button:hover span:after {
     color: white;
     border: none;
     cursor: pointer;
-
+    z-index: 999;
 }

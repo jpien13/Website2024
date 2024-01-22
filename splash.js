@@ -4,6 +4,7 @@ window.addEventListener('load', function() {
     const skipButton = document.getElementById('skip-button');
 
     const hideSplashScreen = function() {
+        console.log("hideSplashScreen function called"); // Add this line
         splash.style.display = 'none'; // Hide splash screen
         mainContent.style.opacity = 1;  // Show main content
     };
@@ -12,5 +13,8 @@ window.addEventListener('load', function() {
     setTimeout(hideSplashScreen, 3000);
 
     // Add event listener to skip button
-    skipButton.addEventListener('click', hideSplashScreen);
+    skipButton.addEventListener('click', function() {
+        console.log("Skip button clicked"); // Add this line
+        hideSplashScreen();
+    });
 });
