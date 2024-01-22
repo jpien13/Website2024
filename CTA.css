@@ -1,0 +1,49 @@
+.resume_container{
+    padding-top: 5rem;
+}
+
+button {
+    border: none;
+    background: none;
+    font-family: 'Sora', sans-serif;
+    transition: var(--transition);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+
+button:hover {
+    color: var(--highlight-text);
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: var(--transition);
+}
+
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -5px;
+  transition: var(--transition);
+}
+
+button:hover span {
+  padding-right: 15px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+.fi-bs-arrow-small-down{
+    color: white;
+}

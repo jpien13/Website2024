@@ -3,6 +3,7 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Hardware Wire Animation</title>
@@ -12,14 +13,10 @@
     <link rel="stylesheet" href="experience.css">
     <link rel="stylesheet" href="glow.css">
     <link rel="stylesheet" href="testimonials.css">
+    <link rel="stylesheet" href="awards.css">
+    <link rel="stylesheet" href="CTA.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-        </ul>
-    </nav>
     <div class="glow-container"></div>
     <div class="main">
         <div class="left">
@@ -27,8 +24,15 @@
                 <div class="header-container">
                     <h1 id="animated-text">HELLO, I'M JASON.</h1>
                     <h1>A <span class="highlighted-word">Computer Engineer</span> at <span class="highlighted-word">Brown</span> Univeristy</h1>
-                    
                 </div>
+                <nav class="nav-container">
+                    <ul>
+                        <li><a href="#about"><span>About</span></a></li>
+                        <li><a href="#experience"><span>Experience</span></a></li>
+                        <li><a href="#testimonials"><span>Testimonials</span></a></li>
+                        <li><a href="#awards"><span>Awards</span></a></li>
+                    </ul>
+                </nav>
                 <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" class="wire-container">
 
                 <!-- Hardware Wire -->
@@ -172,12 +176,16 @@
             
         </div>
         <div class="right">
-            <section id="'about">
+            <section id="about">
                 <div class="container about__container">
                     <p>Hello! My name is <span class="highlighted-word">Jason Pien</span> and I am a junior at Brown Univeristy pursuing a B.S. in Computer Engineering set to graduate in May 2025. My background is in both <span class="highlighted-word">hardware</span> and <span class="highlighted-word">software</span> whilst having an <span class="highlighted-word">entreprenurial</span> mindset as a founder of a startup.</p>
                     <p>My real strength is my ability to stay self-motivated and set ambitious goals. Whether it's building my own company, optimizing school projects, or winning a national Taekwondo championship, I'm always looking to challenge myself and put in the work to achieve my goals. I love working and collaborating with others.</p>
-                    <p>Tau Beta Pi Engineering Honor Society | <span class="highlighted-word">Top 1/8th</span> of all juniors</p>
-                    <p><span class="highlighted-word">3.97 GPA</span></p>
+                    <p>Tau Beta Pi Engineering Honor Society | <span class="highlighted-word">Top 1/8th</span> of all juniors | <span class="highlighted-word">3.97 GPA</span></p>
+                    <div class="resume_container">
+                    <a href="Jason Pien Resume.pdf" download="Jason Pien Resume.pdf">
+                        <button><span>Download My Full Resume</span></button>
+                    </a>
+                </div>
                 </div>
             </section>
             <section id="experience">
@@ -323,7 +331,7 @@
                     </div>
                 </div>
             </section>
-            <section id="Testimonials">
+            <section id="testimonials">
                 <div class="container testimonials__container">
                     <div class="testimonials__details">
                         <div class="testimonials-person">
@@ -338,6 +346,51 @@
                             <h3>Jude Adelman | Head TA</h3>
                         </div>
                         <p>Jason's passion for engineering, combined with his great teaching abilities, made him a standout mentor. He consistently demonstrated a high level of professionalism and work ethic, earning my trust quickly as well as the respect of other mentors and  his mentees. I wholeheartedly recommend Jason for any engineering position, confident that he will be a valuable asset to any organization fortunate enough to have him on their team.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="awards">
+                <div class="container awards__container">
+                    <div class="awards__details">
+                        <div class="left-content">
+                            <img class='awards-image' src="images/TBP.jpeg" alt="'Tau Beta Pi">
+                        </div>
+                        <div class="right-content">
+                            <div class="award-name">
+                                <h3>Tau Beta Pi Engineering Honor Society</h3>
+                            </div>
+                            <div class="award-description">
+                                <p>1 of 23 members at Brown awarded for "recognition of superior scholarship and exemplary character to students in engineering."</p>
+                                <p>In order to be inducted into the honor society, juniors must rank in the top eighth of their class.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="awards__details">
+                        <div class="left-content">
+                            <div class="award-name">
+                                <h3>Brown Entrepreneurship Scholarly Award</h3>
+                            </div>
+                            <div class="award-description">
+                                <p>Awarded $4000 in recognition of acceptance into Brown’s Premier Startup Accelerator</p>
+                            </div>
+                        </div>
+                        <div class="right-content">
+                            <img class='awards-image' src="images/Blab.jpg" alt="'Blab awards pic">
+                        </div>
+                    </div>
+                    <div class="awards__details">
+                        <div class="left-content">
+                            <img class='awards-image' src="images/tkd.JPG" alt="'TKD">
+                        </div>
+                        <div class="right-content">
+                            <div class="award-name">
+                                <h3>National Collegiate Taekwondo Medalist</h3>
+                            </div>
+                            <div class="award-description">
+                                <p>Placed 3rd overall in sparring | Bantam Weight | Black Belt Division Sparring</p>
+                                <p>Competed at Nationals after fighting several tournaments in the black belt dvision within the Eastern Collegiate Taekwondo Conference </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

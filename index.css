@@ -8,6 +8,8 @@
     --text-color: #D4D4D8;
     --section-header: #2E7BC8;
     --highlight-text: #00E0FF;
+
+    --transition: all 400ms ease;
 }
 
 .main{
@@ -20,7 +22,6 @@
     width: 50%;
     height: 100vh;
     padding: 2%;
-    overflow-y: auto;
     
 }
 
@@ -37,6 +38,7 @@
     right: 0;
     top: 0;
     bottom: 0;
+    overflow-y: auto;
 }
  
 body, html {
@@ -57,12 +59,61 @@ body, html {
 }
 
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
     z-index: 10;
-
 }
+
+.nav-container{
+    padding-top: 2rem;
+    margin: 0 auto;
+    width: 80%;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a{
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+    line-height: 40px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+li a:hover {
+  color: var(--highlight-text);
+}
+
+li a span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: var(--transition);
+}
+
+
+li a span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -5px;
+  transition: var(--transition);
+}
+
+li a:hover span {
+  padding-right: 15px;
+}
+
+li a:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 
 section {
     display: flex;

@@ -1,0 +1,46 @@
+.awards__container{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem;
+    width: 100%;
+}
+
+.awards__details {
+    display: flex;
+    flex-direction: row;
+    padding: 3px;
+    padding-bottom: 10%;
+}
+
+.awards__details:nth-child(odd) .right-content {
+    flex-basis: 60%;
+    padding-left: 2%;
+}
+
+.awards__details:nth-child(odd) .left-content {
+    flex-basis: 40%;
+    padding-right: 2%;
+}
+
+.awards__details:nth-child(even) .right-content {
+    flex-basis: 40%;
+    padding-left: 2%;
+}
+
+.awards__details:nth-child(even) .left-content {
+    flex-basis: 60%;
+    padding-right: 2%;
+}
+
+.awards-image {
+    width: 100%;
+    border-radius: 22px;
+}
+
+.left-content, .right-content {
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.awards__details h3{
+    margin-top: 0;
+}
