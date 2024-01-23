@@ -285,4 +285,8 @@ svg {
     .experience__details .job-description.job-description {
         width: auto; /* Adjust width as needed */
     }
+
+    #animated-text {
+        font-size: 30px; /* Adjust the size as needed */
+    }
 }
