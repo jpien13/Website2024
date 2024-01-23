@@ -1,13 +1,13 @@
-.header-container {
+.header__container {
     margin: 0 auto;
     width: 80%;
     margin-top: 5rem;
 }
 
 .wire-container {
-    width: 100%; /* Adjust as needed */
-    height: auto; /* This will maintain the aspect ratio */
-    max-height: 100vh; /* Optional: To limit the maximum height */
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
 }
 
 .about__container{
@@ -16,7 +16,7 @@
 }
 
 .social {
-    padding-left: 0px;
+    padding-left: 0;
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-size: 30px;
@@ -34,16 +34,17 @@
     margin-right: 10px;
     transition: ease .3s;
 }
+
 .social li:hover {
     color: var(--highlight-text);
     border: 1px solid var(--highlight-text);
 }
+
 .social ul {
     list-style-type: none;
     padding-left: 0;
     margin: 0;
 }
-
 
 .social:hover > li {
   opacity: 0.5;

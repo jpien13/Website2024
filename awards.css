@@ -38,7 +38,7 @@
 }
 
 .left-content, .right-content {
-    box-sizing: border-box; /* Include padding in the width calculation */
+    box-sizing: border-box;
 }
 
 .awards__details h3{

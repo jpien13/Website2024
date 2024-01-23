@@ -9,13 +9,13 @@ function currentAni(trailSelectors, rate) {
             trail.style.strokeDasharray = `${visibleLength} ${pathLength - visibleLength}`;
             let dashOffset = 0;
 
-            const speed = rate; // Speed of the animation
+            const speed = rate;
 
             function animate() {
                 dashOffset -= speed; // Subtracting because negatives result in visually forward progression
                 trail.style.strokeDashoffset = dashOffset;
 
-                if (dashOffset <= -pathLength) { // Reset the animation once the current reaches the end of the wire
+                if (dashOffset <= -pathLength) { // Reset
                     dashOffset = 0;
                 }
 

@@ -1,21 +1,21 @@
 .resume_container{
-    padding: 0;
+  padding: 0;
 }
 
 button {
-    border: none;
-    background: none;
-    font-family: 'Sora', sans-serif;
-    transition: var(--transition);
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 400;
-    color: white;
-    padding: 0;
+  border: none;
+  background: none;
+  font-family: var(--font);
+  transition: var(--transition);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  padding: 0;
 }
 
 button:hover {
-    color: var(--highlight-text);
+  color: var(--highlight-text);
 }
 
 button span {
@@ -24,7 +24,6 @@ button span {
   position: relative;
   transition: var(--transition);
 }
-
 
 button span:after {
   content: '\00bb';
@@ -50,13 +49,13 @@ button:hover span:after {
 }
 
 #skip-button {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-    z-index: 999;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
 }

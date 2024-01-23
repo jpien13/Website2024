@@ -50,14 +50,14 @@ svg {
 .Me {
     font-weight: 800;
     font-size: 40px; 
-    font-family: 'Sora', sans-serif;
+    font-family: var(--font);
     fill: #FFFFFF;
 }
 
 .labelID {
     font-weight: 800;
     font-size: 30px;
-    font-family: 'Sora', sans-serif;
+    font-family: var(--font);
 }
 
 .label.color-1 {
