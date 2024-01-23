@@ -8,6 +8,13 @@
     flex-direction: row;
     align-items: flex-start;
     padding: 10px;
+    transition: border 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.experience__details:hover {
+    border: 0.5px solid #84d0ff; /* Light border color, adjust as needed */
+    border-radius: 11px;
+    background-color: rgba(255, 255, 255, 0.05); /* Slightly filled background with reduced opacity */
 }
 
 .job-description h3{
