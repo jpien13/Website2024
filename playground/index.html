@@ -1,268 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <title>Hardware Wire Animation</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="experience.css">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-        </ul>
-    </nav>
-    <div class="main">
-        <div class="left">
-            <div class="left__container">
-                <div class="header-container">
-                    <h1 id="animated-text">HELLO, I'M JASON.</h1>
-                    <h1>A <span class="highlighted-word">Computer Engineer</span> at <span class="highlighted-word">Brown</span> Univeristy</h1>
-                    
-                </div>
-                <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" class="wire-container">
-
-                <!-- Hardware Wire -->
-                <path class="wire" d="M370,258 L450,258 L450,285 L525,285" fill="none"/>
-                <path class="trail color-1" d="M370,258 L450,258 L450,285 L525,285" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-                <!-- Software Wire -->
-                <path class="wire" d="M370,345 L450,345 L450,318 L525,318" fill="none"/>
-                <path class="trail color-2" d="M370,345 L450,345 L450,318 L525,318" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-                <!-- Business Wire -->
-                <path class="wire" d="M370,509 L450,509 L450,536 L525,536" fill="none"/>
-                <path class="trail color-3" d="M370,509 L450,509 L450,536 L525,536" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-                <!-- Product Wire -->
-                <path class="wire" d="M370,596 L450,596 L450,569 L525,569" fill="none"/>
-                <path class="trail color-4" d="M370,596 L450,596 L450,569 L525,569" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-                <!-- Hrdw + sftw Wire -->
-                <path class="wire" d="M608,297 L687,297 L687,353 L760,353" fill="none"/>
-                <path class="trail color-5" d="M610,297 L687,297 L687,353 L760,353" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-                <!-- Biz + Prod Wire -->
-                <path class="wire" d="M608,550 L687,550 L687,494 L760,494" fill="none"/>
-                <path class="trail color-6" d="M610,550 L687,550 L687,494 L760,494" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-
-                <!-- Register1 Output Q1 -->
-                <path class="wire" d="M815,494 L860,494, L860,445, L920,445" fill="none"/>
-                <path class="trail color-6" d="M815,494 L860,494, L860,445, L920,445" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-
-                <!-- Register2 Output Q2 -->
-                <path class="wire" d="M815,353 L860,353, L860,402, L920,402" fill="none"/>
-                <path class="trail color-5" d="M815,353 L860,353, L860,402, L920,402" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-
-                <!-- Q1 + Q2 Output Q3 -->
-                <path class="wire" d="M1005,428 L1200,428" fill="none"/>
-                <path class="trail color-5" d="M1005,428 L1200,428" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-
-                <!-- Hrdw + sftw AND Gate -->
-                <g id="ANDGate3" transform="translate(525,265)">
-                    <path d="M0 0 L0 67 L55 67 A26 26 0 0 0 55 0 Z" fill="#F9D98E"/>
-                </g>
-
-                <!-- Biz + Prod AND Gate -->
-                <g id="ANDGate3" transform="translate(525,515)">
-                    <path d="M0 0 L0 67 L55 67 A26 26 0 0 0 55 0 Z" fill="#F9D98E"/>
-                </g>
-
-                <!-- Q1 + Q2 AND Gate -->
-                <g id="ANDGate3" transform="translate(915,393)">
-                    <path d="M0 0 L0 67 L55 67 A26 26 0 0 0 55 0 Z" fill="#F9D98E"/>
-                </g>
-
-
-                <!-- CLK Wire -->
-                <!-- NOTE THAT BOTH CLKWIRE LENGTH HAVE TO BE THE SAME SO THAT THE ANIMATION IS SYNCED. AS SUCH I ADDED A BOOF AHH RECTANGLE TO HIDE THE EXTENSION ON WIRE 2-->
-                <path class="CLKwire" d="M962,140 L962,215 L789,215 L789,550" fill="none"/>
-                <path class="trail color-7" d="M962,140 L962,215 L789,215 L789,550" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-                <path class="CLKwire" d="M962,140 L962,215 L1126,215 L1126,559" fill="none"/>
-                <path class="trail color-7" d="M962,140 L962,215 L1126,215 L1126,559" fill="none" stroke-dasharray="700" stroke-dashoffset="700"/>
-                <!-- BOOF AHH RECTANGLE TO HIDE THE CLKWire Extension-->
-                <rect width="50" height="100" x="1100" y="480" fill="white"/>
-
-                <g class="register" transform="translate(760, 320)"> 
-                    <!-- Elements positioned relative to (0,0) within the group -->
-                    <rect width="58" height="96" x="0" y="0" rx="18" ry="18" fill="#BFBFBF"/>
-                    <rect width="58" height="89" x="0" y="0" rx="18" ry="18" fill="#757575"/>
-                    <rect width="18" height="14" x="5" y="24" rx="5" ry="5" fill="#268A81"/>
-                    <rect width="18" height="14" x="5" y="27" rx="5" ry="5" fill="#0F4741"/>
-                    <text x="9" y="39" font-family="Inter" font-size="14" font-weight="800" fill="#44AE85">D</text>
-                    <rect width="18" height="14" x="35" y="24" rx="5" ry="5" fill="#268A81"/>
-                    <rect width="18" height="14" x="35" y="27" rx="5" ry="5" fill="#0F4741"/>
-                    <text x="39" y="39" font-family="Inter" font-size="14" font-weight="800" fill="#44AE85">Q</text>
-                    <!-- Arrow positioned relative to (0,0) within the group -->
-                    <g transform="translate(29, 20)"> 
-                        <polygon points="0,0 -10,-10 10,-10" stroke="#BFBFBF" fill="#BFBFBF"/>
-                    </g>
-                </g>
-
-                <g class="register" transform="translate(760, 460)"> 
-                    <!-- Elements positioned relative to (0,0) within the group -->
-                    <rect width="58" height="96" x="0" y="0" rx="18" ry="18" fill="#BFBFBF"/>
-                    <rect width="58" height="89" x="0" y="0" rx="18" ry="18" fill="#757575"/>
-                    <rect width="18" height="14" x="5" y="24" rx="5" ry="5" fill="#268A81"/>
-                    <rect width="18" height="14" x="5" y="27" rx="5" ry="5" fill="#0F4741"/>
-                    <text x="9" y="39" font-family="Inter" font-size="14" font-weight="800" fill="#44AE85">D</text>
-                    <rect width="18" height="14" x="35" y="24" rx="5" ry="5" fill="#268A81"/>
-                    <rect width="18" height="14" x="35" y="27" rx="5" ry="5" fill="#0F4741"/>
-                    <text x="39" y="39" font-family="Inter" font-size="14" font-weight="800" fill="#44AE85">Q</text>
-                    <!-- Arrow positioned relative to (0,0) within the group -->
-                    <g transform="translate(29, 20)"> 
-                        <polygon points="0,0 -10,-10 10,-10" stroke="#BFBFBF" fill="#BFBFBF"/>
-                    </g>
-                </g>
-
-                <g class="register" transform="translate(1097, 392)"> 
-                    <!-- Elements positioned relative to (0,0) within the group -->
-                    <rect width="58" height="96" x="0" y="0" rx="18" ry="18" fill="#BFBFBF"/>
-                    <rect width="58" height="89" x="0" y="0" rx="18" ry="18" fill="#757575"/>
-                    <rect width="18" height="14" x="5" y="24" rx="5" ry="5" fill="#268A81"/>
-                    <rect width="18" height="14" x="5" y="27" rx="5" ry="5" fill="#0F4741"/>
-                    <text x="9" y="39" font-family="Inter" font-size="14" font-weight="800" fill="#44AE85">D</text>
-                    <rect width="18" height="14" x="35" y="24" rx="5" ry="5" fill="#268A81"/>
-                    <rect width="18" height="14" x="35" y="27" rx="5" ry="5" fill="#0F4741"/>
-                    <text x="39" y="39" font-family="Inter" font-size="14" font-weight="800" fill="#44AE85">Q</text>
-                    <!-- Arrow positioned relative to (0,0) within the group -->
-                    <g transform="translate(29, 20)"> 
-                        <polygon points="0,0 -10,-10 10,-10" stroke="#BFBFBF" fill="#BFBFBF"/>
-                    </g>
-                </g>
-
-                <g class="clock" transform="translate(912, 95)"> 
-                    <!-- Elements positioned relative to (0,0) within the group -->
-                    <rect width="88" height="24" x="5" y="24" rx="5" ry="5" fill="#268A81"/>
-                    <rect width="88" height="24" x="5" y="20" rx="5" ry="5" fill="#0F4741"/>
-                    <text x="26" y="38" font-family="Inter" font-size="18" font-weight="800" fill="#44AE85">2024</text>
-                </g>
-
-                <g class="label color-1" transform="translate(160, 235)"> 
-                    <rect width="211" height="44" x="0" y="0" rx="8" ry="8"/>
-                    <text class="labelID color-1" x="16" y="34">HARDWARE</text>
-                </g>
-
-                <g class="label color-2" transform="translate(160, 322)"> 
-                    <rect width="211" height="44" x="0" y="0" rx="8" ry="8"/>
-                    <text class="labelID color-2" x="16" y="34">SOFTWARE</text>
-                </g>
-
-                <g class="label color-3" transform="translate(160, 482)"> 
-                    <rect width="211" height="44" x="0" y="0" rx="8" ry="8"/>
-                    <text class="labelID color-3" x="30" y="34">BUSINESS</text>
-                </g>
-
-                <g class="label color-4" transform="translate(160, 572)"> 
-                    <rect width="211" height="44" x="0" y="0" rx="8" ry="8"/>
-                    <text class="labelID color-4" x="28" y="34">PRODUCT</text>
-                </g>
-
-                <g class="label color-2" transform="translate(1200, 408)"> 
-                    <rect width="221" height="44" x="0" y="0" rx="8" ry="8"/>
-                    <text class="labelID color-2" x="23" y="34">JASON PIEN</text>
-                </g>
-                
-                </svg>
-            </div>
-            
-        </div>
-        <div class="right">
-            <section id="'about">
-                <div class="container about__container">
-                    <p>Hello! My name is <span class="highlighted-word">Jason Pien</span> and I am a junior at Brown Univeristy pursuing a B.S. in Computer Engineering set to graduate in May 2025. My background is in both <span class="highlighted-word">hardware</span> and <span class="highlighted-word">software</span> whilst having an <span class="highlighted-word">entreprenurial</span> mindset as a founder of a startup.</p>
-                    <p>My real strength is my ability to stay self-motivated and set ambitious goals. Whether it's building my own company, optimizing school projects, or winning a national Taekwondo championship, I'm always looking to challenge myself and put in the work to achieve my goals. I love working and collaborating with others.</p>
-                </div>
-            </section>
-            <section id="experience">
-                <div class="container experience__container">
-                    <div class="experience__details">
-                        <div class="date">
-                            <h6 class="date">Summer 2024</h6>
-                        </div>
-                        <div class="job-description">
-                            <h3>EY 'Ernst & Young'</h3>
-                            <p class="position">Software Engineering Intern</p>
-                            <p class="position">Digital and Emerging Tech Group</p>
-                            <p>I will be learning and implementing next-generation technologies within leading investment banks, insurers, and investment managers. Such technologies include AI, decentralized finance, quantum and edge computing.</p>
-                            <div class="skills">
-                                <div class="text-container">
-                                    <span>Artificial Intelligence</span>
-                                </div>
-                                <div class="text-container">
-                                    <span>Python</span>
-                                </div>
-                                <div class="text-container">
-                                    <span>Decentralized Finance</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="experience__details">
-                        <div class="date">
-                            <h6 class="date">June — Sept 2023</h6>
-                        </div>
-                        <div class="job-description">
-                            <h3>Freedays</h3>
-                            <p class="position">CEO & Co-founder</p>
-                            <p class="position">B-lab Summer Accelerator</p>
-                            <p>After being accepted into Brown University's premier summer start-up accelerator, I had the fortune to experience the many ups and downs of running a lean start-up. I learned everything from start-up legal, customer validation, bottom-up research, business finance, and how to embrace the suck and adapt.</p>
-                            <p>The idea of Freedays was to help college students quit vaping.</p>
-                            <p>On the technical side of things, I first built a hardware breadboard prototype that attached to the air junction of vapes that would, throughout the day, disable the vape. Following technical breakthroughs and legal regulations, we pivoted to software were I developed the MVP to our "mobile AI therapist" which utilized a chat-gpt-3.5-turbo.</p>
-                            <div class="skills">
-                                <div class="text-container">
-                                    <span>Artificial Intelligence</span>
-                                </div>
-                                <div class="text-container">
-                                    <span>Python</span>
-                                </div>
-                                <div class="text-container">
-                                    <span>Large Language Models</span>
-                                </div>
-                                <div class="text-container">
-                                    <span>Microcontrollers</span>
-                                </div>
-                                <div class="text-container">
-                                    <span>C Programming</span>
-                                </div>
-                                <div class="text-container">
-                                    <span>Agile</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="experience__details">
-                        <div class="date">
-                            <h6 class="date">Summer 2024</h6>
-                        </div>
-                        <div class="job-description">
-                            <h3>EY 'Ernst & Young'</h3>
-                            <p class="position">Software Engineering Intern</p>
-                            <p class="position">Digital and Emerging Tech Group</p>
-                            <p>I will be learning and implementing next-generation technologies within leading investment banks, insurers, and investment managers. Such technologies include AI, decentralized finance, quantum and edge computing.</p>
-                            <div class="skills">
-                                <div class="text-container">
-                                    <span>Artificial Intelligence</span>
-                                </div>
-                                <div class="text-container">
-                                    <span>Python</span>
-                                </div>
-                                <div class="text-container">
-                                    <span>Decentralized Finance</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+  <head>
+    <title>Personal Website</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:image" content="images/headshot.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/experience.css" />
+    <link rel="stylesheet" href="css/glow.css" />
+    <link rel="stylesheet" href="css/testimonials.css" />
+    <link rel="stylesheet" href="css/awards.css" />
+    <link rel="stylesheet" href="css/CTA.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/education.css" />
+    <link rel="stylesheet" href="css/left.css" />
+  </head>
+  <body>
+    <div class="glow-container"></div>
+    <div id="splash-screen">
+      
     </div>
-    
+    <div class="main" id="main">
+      <div class="left">
+        
+      </div>
+      <div class="right">
+        <section id="about">
+          
+        </section>
 
-    
+        <section id="education">
+          
+        </section>
 
+        <section id="experience">
+          
+        </section>
 
+        <section id="projects">
+          
+        </section>
+
+        <section id="testimonials">
+          
+        </section>
+        <section id="awards">
+          
+        </section>
+      </div>
+    </div>
+    <script src="splash.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
