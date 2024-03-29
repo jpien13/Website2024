@@ -1,0 +1,7 @@
+:root {
+  --color-bg: #041425;
+  --font: "Sora", sans-serif;
+}
+html {
+  background-color: var(--color-bg);
+}

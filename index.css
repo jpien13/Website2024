@@ -1,0 +1,288 @@
+:root {
+  --yellow1: #f9d98e;
+  --grey: #3e3e3e;
+  --red1: #e62d69;
+  --black: #000000;
+  --CLKGrey: #757575;
+  --color-bg: #041425;
+  --color-bg-alt: #113458;
+  --text-color: #dee3f2;
+  --block: rgba(71, 255, 240, 0.1);
+  --highlight-text: #47fff0;
+
+  --transition: all 200ms ease;
+
+  --font: "Sora", sans-serif;
+  --boldest: 800;
+  --second-boldest: 400;
+  --third-boldest: 200;
+
+  --main-heading: 48px;
+  --subheading-1: 30px;
+  --subheading-2: 20px;
+  --text: 16px;
+}
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg);
+  z-index: 2; /* Higher than other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s;
+}
+
+/* Animation to swipe up the splash screen */
+@keyframes swipeUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+/*  Text styling  */
+.bolded-word {
+  font-weight: var(--boldest);
+  color: white;
+  transition: var(--transition);
+}
+
+.highlighted {
+  color: var(--highlight-text);
+  font-weight: var(--second-boldest);
+}
+
+/*  Text styling  */
+
+.animation {
+  z-index: 2;
+}
+
+.main {
+  display: flex;
+  width: 85%;
+  z-index: 2;
+}
+
+section {
+  padding-bottom: 40px;
+}
+
+.left,
+.right {
+  width: 50%;
+  height: 100vh;
+  padding: 2%;
+}
+
+.left {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+body,
+html {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg);
+  background-position: center center;
+  font-family: var(--font);
+}
+
+.container {
+  margin: 0 auto;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: var(--main-heading);
+  font-weight: var(--second-boldest);
+  color: white;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: var(--subheading-1);
+  font-weight: var(--boldest);
+  color: white;
+}
+
+h3 {
+  font-size: var(--subheading-2);
+  font-weight: var(--boldest);
+  color: white;
+}
+
+h4 {
+  font-size: var(--text);
+  font-weight: var(--third-boldest);
+  color: var(--text-color);
+}
+
+p {
+  font-size: var(--text);
+  font-weight: 300;
+  color: var(--text-color);
+  font-family: var(--font);
+  line-height: 27px;
+}
+
+svg {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Common wire style */
+.wire {
+  stroke: var(--grey); /* Black color for all wires */
+  stroke-width: 8;
+}
+
+.CLKwire {
+  stroke: var(--grey); /* Black color for all wires */
+  stroke-width: 8;
+}
+
+.trail {
+  stroke-width: 8;
+}
+
+/* Specific trail styles */
+.trail.color-1 {
+  stroke: #f9d98e;
+}
+
+.trail.color-2 {
+  stroke: #e62d69;
+}
+
+.trail.color-3 {
+  stroke: #9b0044;
+}
+
+.trail.color-4 {
+  stroke: #f38821;
+}
+
+.trail.color-5 {
+  stroke: #e62d68;
+}
+
+.trail.color-6 {
+  stroke: #9b0043;
+}
+
+.trail.color-7 {
+  stroke: #268a81;
+}
+
+.labelID {
+  font-weight: 800;
+  font-size: 30px;
+  font-family: var(--font);
+}
+
+.label.color-1 {
+  fill: #f9d987;
+}
+
+.label.color-2 {
+  fill: #e62d69;
+}
+
+.label.color-3 {
+  fill: #9b0044;
+}
+
+.label.color-4 {
+  fill: #f38821;
+}
+
+.labelID.color-1 {
+  fill: #cd8c3a;
+}
+
+.labelID.color-2 {
+  fill: #af033e;
+}
+
+.labelID.color-3 {
+  fill: #f783ae;
+}
+
+.labelID.color-4 {
+  fill: #ffd57c;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .main {
+    flex-direction: column; /* Stack left and right sections vertically */
+  }
+
+  .left,
+  .right {
+    width: 100%; /* Full width for each section */
+    height: auto; /* Height is auto to accommodate content */
+    padding: 1rem; /* Adjust padding as needed */
+  }
+
+  /* Adjust SVG size for smaller screens */
+  svg {
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Adjust height to maintain aspect ratio */
+  }
+
+  .experience__details.experience__details {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .experience__details .date.date {
+    width: auto; /* Adjust width as needed */
+    margin-right: 0; /* Remove the margin to the right */
+    margin-bottom: 10px; /* Add some space below the date */
+  }
+
+  .experience__details .job-description.job-description {
+    width: auto; /* Adjust width as needed */
+  }
+
+  #animated-text {
+    font-size: 30px; /* Adjust the size as needed */
+  }
+}

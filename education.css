@@ -1,0 +1,21 @@
+.education__container {
+  width: 100%;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.institution p {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.coursework a {
+  text-decoration: none;
+  color: var(--highlight-text);
+}
+
+.coursework a:hover {
+  text-decoration: underline;
+}
