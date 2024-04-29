@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="project.css" />
     <link rel="stylesheet" href="education.css" />
     <link rel="stylesheet" href="left.css" />
+    <link rel="stylesheet" href="professional.css" />
+    <link rel="stylesheet" href="funfact.css" />
+    <link rel="stylesheet" href="clubs.css" />
   </head>
   <body>
     <div class="glow-container"></div>
@@ -532,16 +535,17 @@
                 <a href="#about"><span>About</span></a>
               </li>
               <li>
+                <a href="#projects"><span>Projects</span></a>
+              </li>
+              <li>
                 <a href="#education"><span>Education</span></a>
               </li>
               <li>
-                <a href="#experience"><span>Experience</span></a>
+                <a href="#clubs"><span>Extracurriculars</span></a>
               </li>
-              <!--
               <li>
-                <a href="#projects"><span>Projects</span></a>
-              </li>
-            -->
+                <a href="#experience"><span>Experience</span></a>
+              </li>      
               <li>
                 <a href="#testimonials"><span>Testimonials</span></a>
               </li>
@@ -554,23 +558,17 @@
             <div class="social">
               <ul>
                 <li>
-                  <a
-                    href="https://www.linkedin.com/in/jason-pien/"
-                    target="_blank"
-                  >
+                  <a href="https://www.linkedin.com/in/jason-pien/" target="_blank" class="social-link">
                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:jason_pien@brown.edu" target="_blank">
+                  <a href="mailto:jason_pien@brown.edu" target="_blank" class="social-link">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://youtu.be/jiVpAeGX-Dk?si=ybvsQ75Vftxkh1q7&t=2073"
-                    target="_blank"
-                  >
+                  <a href="https://youtu.be/jiVpAeGX-Dk?si=ybvsQ75Vftxkh1q7&t=2073" target="_blank" class="social-link">
                     <i class="fa fa-youtube" aria-hidden="true"></i>
                   </a>
                 </li>
@@ -586,10 +584,13 @@
               Hello! My name is
               <span class="highlighted">Jason Pien</span> and I am a junior at
               Brown University set to graduate with a B.S. in Computer
-              Engineering in May 2025. While I navigate my journey, I'm
-              enthusiastically exploring diverse fields including software
-              engineering, FPGA development, and product management, embracing
-              the vast potential within each area.
+              Engineering in May 2025. I do hardware, software, and more! Looking for a full-time job in chip design.
+            </p>
+            <p>
+              This summer I am trying my hand at Software Engineering, working at EY within their financial services engineering team.
+            </p>
+            <p>
+              I grew up around Summit New Jersey. I am into a lot of things: programming, hardware, poker, DJing, and snowboarding.
             </p>
             <div class="resume_container">
               <a href="Jason_Pien_Resume.pdf" download="Jason Pien Resume.pdf">
@@ -601,6 +602,105 @@
           </div>
         </section>
 
+        <section id="professional">
+          <div class="container professional__container">
+            <div class="professional__details">
+              <div class="professional-left-content">
+                  <div class="image-wrapper">
+                      <img class="professional-image" src="images/verilog.png" alt="'Verilog Example">
+                  </div>
+              </div>
+
+              <div class="professional-right-content">
+                <div class="professional-name">
+                  <h3>Digital Circuit Design</h3>
+                </div>
+                <div class="professional-description">
+                  <p>
+                    I am proficient in <span class="highlighted">Verilog HDL</span> for RTL code. I also learned about synthesis, floor plan, and placement routing. Having survived my FPGA/Verilog classes, I will be returning as a TA under Professor Sherief Reda.
+                  </p>
+                  <p>
+                    My interest and motivation come from making computation faster as well-designed circuits can easily achieve 10x or even 100x performance compared to the best software-implemented algorithms.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="professional__details">
+              <div class="professional-left-content">
+                <div class="professional-name">
+                  <h3>Programming!</h3>
+                </div>
+                <div class="professional-description">
+                  <p>
+                    My language of choice is <span class="highlighted">Python 3.9.18</span>. I can write in any other programming language with reference to documentation
+                  </p>
+                  <p>
+                    My motivation for learning software is to explore the interaction between software and hardware. By understanding the complexities of both, I am in a better position to build more efficient systems. I am particularly interested in exploring efficient and fast computation within the realms of AI chips and GPUs.
+                  </p>
+                </div>
+              </div>
+              <div class="professional-right-content">
+                <img
+                  class="professional-image"
+                  src="images/hardware-software.jpeg"
+                  alt="'hardware, software"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects">
+          <div class="container projects__container">
+            <!-- <a href="project1.html" class="project-link"> -->
+              <div class="project__details">
+                <h3>Verilog RISC-V Pipelined Processor From Scratch</h3>
+                <div class="project-image-container">
+                  <img
+                    class="project-image"
+                    src="images/ENG1640 FINAL PIPELINE PROCESSOR DESIGN.jpg"
+                    alt="'temp placeholder"
+                  />
+                </div>
+                <div class="project-description-container">
+                  
+                  <p class="project-description">I designed and synthesized a functional and FPGA-deployable RISC-V 2-stage pipelined processor architecture using Verilog HDL on the Quartus Intel Prime EDA suite. The initial specification was to develop a single-cycle processor operating at a nominal frequency of 50MHz, capable of executing a program that computed the factorial of 6 (n-factorial, where n=6) with a Cycles Per Instruction (CPI) of 1, resulting in a runtime of 1440 nanoseconds (20 ns x 72 cycles). </p>
+                  <p>In my first attempt, I could push my frequency to 100MHz, far exceeding the requirements. Following new spec requirements for a pipelined design, my benchmark was to hit a 15-20% improvement in runtime. I analyzed the spec requirements and my design and found that I could get away with a 2-stage pipeline, reducing the number of required cycles at the tradeoff of a lower clock frequency since 100MHz was already high. Post-implementation of the 2-stage pipeline and logic optimization, as well as synthesis and place-and-route, I achieved a significant performance enhancement. The optimized processor attained a maximum operating frequency of 145MHz, a 190% increase in clock speed compared to the initial design specification. This optimization translated to a runtime of 572 nanoseconds (6.896 ns x 83 cycles), a 60.3% improvement over the original design. </p>
+                  <p>I had a slight increase in used cycles since I made the design choice to use hardware stalls on jal or jalr instructions on a 2-stage pipeline while still hitting the required specs. Through critical path analysis, I identified potential for further performance improvement by pipelining the processor into 3 stages and pipelining the multiplier unit within the Arithmetic Logic Unit (ALU), as the multiply operation exhibited the longest propagation delay.</p>
+                  <p>Attained a 1.26x speed-up over the single-cycle design baseline.</p>
+                  <p>Achieved a 2.52x speed-up compared to the target performance specification.</p>
+                  <p>Ranked 2nd for runtime performance, (7% slower than the 1st place design).</p>
+                    
+                  </p>
+                  <span>I cannot provide a GitHub link since my code would give hints to current students</span>
+                </div>
+              </div>
+            <!-- </a> -->
+          </div>
+          <div class="container projects__container">
+            <a href="https://github.com/jpien13/T.I.D.A.L-Bot" target="_blank" class="project-link">
+              <div class="project__details">
+                <h3>AI Powered Daily Tech News Compiler Bot (T.I.D.A.L)</h3>
+                <div class="project-image-container">
+                  <img
+                    class="project-image"
+                    src="images/tidal.png"
+                    alt="'temp placeholder"
+                  />
+                </div>
+                <div class="project-description-container">
+                  
+                  <p class="project-description">
+                    Frustrated by the time-consuming process of reading lengthy tech newsletters during my busy morning routine, I developed TIDAL Bot - a solution that automates the extraction of relevant article URLs, scrapes the content, and uses AI-powered natural language processing to deliver concise text summaries directly to my phone. This allows me to quickly grasp the key details of the latest tech news without being bogged down by unnecessary information, while still having the option to refer back to the full articles if needed. I've included a diagram outlining the tradeoffs and design choices involved, and as an ongoing project, I'll continue to refine the system. If there's sufficient interest, I'm open to scaling TIDAL Bot to accommodate a wider user base.
+                  </p>
+                  <span>Try it yourself! (GitHub repo)</span>
+                </div>
+              </div>
+            <!-- </a> -->
+          </div>
+        </section>
+      
+
         <section id="education">
           <div class="container education__container">
             <div class="institution">
@@ -611,6 +711,10 @@
               </p>
             </div>
             <div class="coursework">
+              <p>Courses For Fall 2024:</p>
+              <p><a>ENGN1650</a>: Embedded Microprocessor Design</p>
+              <p><a>CSCI0330</a>: Computer Systems</p>
+              <p><a>CSCI1760</a>: Multiprocessor Synchronization</p>
               <p>Relevant Courses:</p>
               <p>
                 <a
@@ -682,13 +786,15 @@
                 Organizations
               </p>
               <p><a>ENGN0900</a>: Managerial Decision Making</p>
+              
             </div>
           </div>
         </section>
 
-        <section id="experience">
-          <div class="fun-fact_container">
-            <img class="profile-pic" src="images/pfp.png" alt="me pfp" />
+        <section id="funfact">
+          <div class="container funfact__container">
+            <div class="fun-fact_container">
+            <img class="profile-pic" src="images/DJ.jpg" alt="me pfp" />
             <p>
               "Fun fact! I like to DJ and mix EDM! My favorite artists are Eli
               Brown, John Summit and Sub Focus. Check out my
@@ -697,16 +803,96 @@
                 target="_blank"
                 >soundbank</a
               >"
+              I frequently DJ events for different student organizations on campus.
             </p>
           </div>
+          </div>
+        </section>
+
+        <section id="clubs">
+          <div class="container clubs__container">
+            <div class="clubs__details">
+              <div class="clubs-left-content">
+                <div class="clubs-name">
+                  <h3>Tau Beta Pi President</h3>
+                  <p>
+                    Engineering Honor Society (Top 12.5%)
+                  </p>
+                </div>
+                <div class="clubs-description">
+                  <p>Tau Beta Pi, founded in 1885, is the second oldest honor society in America after Phi Beta Kappa. While Phi Beta Kappa is for liberal arts students, Tau Beta Pi recognizes superior scholarship and character in engineering students.</p>
+                  <p>To be inducted, juniors must rank in the top eighth of their class and seniors in the top fifth.</p>
+                </div>
+              </div>
+              <div class="clubs-right-content">
+                <img
+                  class="clubs-image"
+                  src="images/TBP.jpeg"
+                  alt="'hardware, software"
+                />
+              </div>
+            </div>
+            <div class="clubs__details">
+              <div class="clubs-left-content">
+                <img
+                  class="clubs-image"
+                  src="images/fintech.png"
+                  alt="'Verilog Example"
+                />
+              </div>
+              <div class="clubs-right-content">
+                <div class="clubs-name">
+                  <h3>FinTech Club</h3>
+                  <p>
+                    Executive Board | Head of Tech
+                  </p>
+                </div>
+                <div class="clubs-description">
+                  <p>
+                    FinTech@Brown has been on campus for over 10 years now. We have worked to connect students with the FinTech industry and interact with opportunities for students in FinTech. Our goal is to help educate students about the industry and how to get involved with financial technology as a whole.
+                  <p>
+                    As the Head of Tech, my responsibilities revolve around educating our members in the technology used in finance as well as maintaining our website.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="clubs__details">
+              <div class="clubs-left-content">
+                <div class="clubs-name">
+                  <h3>Brown Taekwondo Club</h3>
+                  <p>
+                    Team A1 Black Belt Sparring Member
+                  </p>
+                </div>
+                <div class="clubs-description">
+                  <p>
+                   In freshman year, I competed for Brown Taekwondo at the A1 sparring level. Within the club, you get placed into A1-A3, B1-B3, C1-C3. I competed both regionally and at NCTA Collegiate Nationals where I placed 3rd.
+                  </p>
+                  <p>
+                    Practices run 4 times a week, each of which are 3 hours long. Fun fact, I had to cut 20 pounds in 1 week for nationals!
+                  </p>
+                </div>
+              </div>
+              <div class="clubs-right-content">
+                <img
+                  class="clubs-image"
+                  src="images/tkd 2.jpg"
+                  alt="'hardware, software"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience">
           <div class="container experience__container">
             <div class="experience__details">
               <div class="date">
                 <h4 class="date">Summer 2024</h4>
               </div>
               <div class="job-description">
-                <h3>EY 'Ernst & Young'</h3>
-                <p class="position">Software Engineering Intern</p>
+                <h3>Incoming Software Engineering Intern</h3>
+                <p class="position">EY 'Ernst & Young'</p>
                 <p class="position">Digital and Emerging Tech Group</p>
                 <p>
                   I will be learning and implementing next-generation
@@ -735,11 +921,41 @@
             </div>
             <div class="experience__details">
               <div class="date">
+                <h4 class="date">Fall 2024</h4>
+              </div>
+              <div class="job-description">
+                <h3>Incoming FPGA/Verilog Teaching Assistant</h3>
+                <p class="position">Brown School of Engineering</p>
+                <p class="position">ENGN1630 under Prof. Reda</p>
+                <p>
+                  I will be running the lab portion of the class where students will be coding circuits in Verilog HDL, verifying designs in ModelSim, and booting their designs to an Altera Cyclone V DE0-CV FPGA. 
+                </p>
+                <div class="skills">
+                  <div class="text-container">
+                    <span>Verilog HDL</span>
+                  </div>
+                  <div class="text-container">
+                    <span>ModelSim</span>
+                  </div>
+                  <div class="text-container">
+                    <span>Quartus Intel Prime</span>
+                  </div>
+                  <div class="text-container">
+                    <span>FPGA</span>
+                  </div>
+                  <div class="text-container">
+                    <span>RTL Design</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="experience__details">
+              <div class="date">
                 <h4 class="date">June — Sept 2023</h4>
               </div>
               <div class="job-description">
-                <h3>Freedays</h3>
-                <p class="position">CEO & Co-founder</p>
+                <h3>Co-Founder</h3>
+                <p class="position">Freedays</p>
                 <p class="position">B-lab Summer Accelerator</p>
                 <p>
                   After being accepted into Brown University's premier summer
@@ -793,17 +1009,17 @@
                 <h4 class="date">March — Dec 2023</h4>
               </div>
               <div class="job-description">
-                <h3>Linkr</h3>
-                <p class="position">UI/UX Designer</p>
+                <h3>UI/UX Designer</h3>
+                <p class="position">Linkr</p>
                 <p>
                   I joined Linkr part-time, leading the renovation of our
-                  website platform. Linkr served as an all in one monetization
-                  platform for micro influencers serving 15M+ users. I primarily
-                  used figma and balsamiq to develop wireframes for a more
+                  website platform. Linkr served as an all-in-one monetization
+                  platform for micro-influencers serving 15M+ users. I primarily
+                  used Figma and Balsamiq to develop wireframes for a more
                   concise, readable, and cleaner UX.
                 </p>
                 <p>
-                  I learned a lot about managing a team, producing fast paced
+                  I learned a lot about managing a team, producing fast-paced
                   deliverables, handling multiple projects, and website UX
                   design.
                 </p>
@@ -834,9 +1050,8 @@
                 <h4 class="date">Aug — Jan 2023</h4>
               </div>
               <div class="job-description">
-                <h3>Brown School of Engineering</h3>
-                <p class="position">Teaching Assistant</p>
-                <p class="position">Intro to Engineering | ENGN0030</p>
+                <h3>Intro to Engineering Teaching Assistant</h3>
+                <p class="position">Brown School of Engineering</p>
                 <p>
                   I taught engineering lab to 10 freshman students training them
                   in MATLab, prototyping machinery, and went over the
@@ -913,35 +1128,7 @@
             </div>
           </div>
         </section>
-        <!--
-        <section id="projects">
-          <div class="container projects__container">
-            <a href="project1.html" class="project-link">
-              <div class="project__details">
-                <div class="project-image-container">
-                  <img
-                    class="project-image"
-                    src="images/placeholder.jpeg"
-                    alt="'temp placeholder"
-                  />
-                </div>
-                <div class="project-description-container">
-                  <h3>Mini Assembler</h3>
-                  <p class="project-description">
-                    I coded a mini assembler for RISC-V code in python 3.9.18.
-                    This assembler accepts a text file containing assembly code
-                    as an input and produces the machine code (written in
-                    hexadecimal text). Since this is a mini assembler, for now,
-                    I have only included a limited instruction set: ADD, ADDI,
-                    SLL, SLLI, SRL, SRLI, XOR, ADDI, ORI, ANDI, MUL, BEQ, BNE.
-                  </p>
-                  <span>More details...</span>
-                </div>
-              </div>
-            </a>
-          </div>
-        </section>
-      -->
+      
 
         <section id="testimonials">
           <div class="container testimonials__container">
@@ -984,31 +1171,7 @@
         </section>
         <section id="awards">
           <div class="container awards__container">
-            <div class="awards__details">
-              <div class="left-content">
-                <img
-                  class="awards-image"
-                  src="images/TBP.jpeg"
-                  alt="'Tau Beta Pi"
-                />
-              </div>
-              <div class="right-content">
-                <div class="award-name">
-                  <h3>Tau Beta Pi Engineering Honor Society</h3>
-                </div>
-                <div class="award-description">
-                  <p>
-                    1 of 23 members at Brown awarded for "recognition of
-                    superior scholarship and exemplary character to students in
-                    engineering."
-                  </p>
-                  <p>
-                    In order to be inducted into the honor society, juniors must
-                    rank in the top eighth of their class.
-                  </p>
-                </div>
-              </div>
-            </div>
+            
             <div class="awards__details">
               <div class="left-content">
                 <div class="award-name">
@@ -1044,7 +1207,7 @@
                   </p>
                   <p>
                     Competed at Nationals after fighting several tournaments in
-                    the black belt dvision within the Eastern Collegiate
+                    the black belt division within the Eastern Collegiate
                     Taekwondo Conference
                   </p>
                 </div>

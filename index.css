@@ -18,9 +18,9 @@
   --third-boldest: 200;
 
   --main-heading: 48px;
-  --subheading-1: 30px;
-  --subheading-2: 20px;
-  --text: 16px;
+  --subheading-1: 35px;
+  --subheading-2: 25px;
+  --text: 19px;
 }
 #splash-screen {
   position: fixed;
@@ -74,13 +74,14 @@
   z-index: 2;
 }
 
-section {
-  padding-bottom: 40px;
+.left {
+  width: 40%;
+  height: 100vh;
+  padding: 2%;
 }
 
-.left,
 .right {
-  width: 50%;
+  width: 60%;
   height: 100vh;
   padding: 2%;
 }
@@ -249,8 +250,8 @@ svg {
   fill: #ffd57c;
 }
 
-/* Media Query for Smaller Screens */
-@media screen and (max-width: 768px) {
+/* TABLET */
+@media screen and (max-width: 1000px) {
   .main {
     flex-direction: column; /* Stack left and right sections vertically */
   }
@@ -282,7 +283,88 @@ svg {
     width: auto; /* Adjust width as needed */
   }
 
+  .professional__details.professional__details {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .awards__details.awards__details {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .project__details.project__details {
+    flex-direction: column; /* Stack items vertically */
+  }
+  
+  .project__details.project-image {
+    width: 0%;
+    height: 0%;
+  }
+
   #animated-text {
     font-size: 30px; /* Adjust the size as needed */
   }
+
+  .clubs__details.clubs__details {
+    flex-direction: column; /* Stack items vertically */
+  }
+  
+  .clubs__details.clubs-image {
+    width: 0%;
+    height: 0%;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 500px) {
+  .main {
+    flex-direction: column; /* Stack left and right sections vertically */
+  }
+
+  .left,
+  .right {
+    width: 100%; /* Full width for each section */
+    height: auto; /* Height is auto to accommodate content */
+    padding: 1rem; /* Adjust padding as needed */
+  }
+
+  /* Adjust SVG size for smaller screens */
+  svg {
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Adjust height to maintain aspect ratio */
+  }
+
+  .experience__details.experience__details {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .experience__details .date.date {
+    width: auto; /* Adjust width as needed */
+    margin-right: 0; /* Remove the margin to the right */
+    margin-bottom: 10px; /* Add some space below the date */
+  }
+
+  .experience__details .job-description.job-description {
+    width: auto; /* Adjust width as needed */
+  }
+
+  .professional__details.professional__details {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .awards__details.awards__details {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .project__details.project__details {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  #animated-text {
+    font-size: 30px; /* Adjust the size as needed */
+  }
+
+  .clubs__details.clubs__details {
+    flex-direction: column; /* Stack items vertically */
+  }
+
 }

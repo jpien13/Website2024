@@ -1,0 +1,7 @@
+.funfact__container{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}

@@ -1,0 +1,46 @@
+.clubs__container{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem;
+    width: 100%;
+}
+
+.clubs__details {
+    display: flex;
+    flex-direction: row;
+    padding: 3px;
+    padding-bottom: 10%;
+}
+
+.clubs__details:nth-child(odd) .clubs-right-content {
+    flex-basis: 60%;
+    padding-left: 2%;
+}
+
+.clubs__details:nth-child(odd) .clubs-left-content {
+    flex-basis: 40%;
+    padding-right: 2%;
+}
+
+.clubs__details:nth-child(even) .clubs-right-content {
+    flex-basis: 40%;
+    padding-left: 2%;
+}
+
+.clubs__details:nth-child(even) .clubs-left-content {
+    flex-basis: 60%;
+    padding-right: 2%;
+}
+
+.clubs-image {
+    width: 100%;
+    border-radius: 0px;
+}
+
+.clubs-left-content, .clubs-right-content {
+    box-sizing: border-box;
+}
+
+.clubs__details h3{
+    margin-top: 0;
+}
